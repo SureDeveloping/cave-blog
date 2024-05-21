@@ -1,9 +1,12 @@
 from django.shortcuts import render
-from django.views.generic import TemplateView
+from django.views.generic import ListView, DetailView
+from . models import Post
 
 
 # Create your views here.
-class Index(TemplateView):
+# Overview with all blog posts
+class HomeView(ListView):
+    model = Post
     template_name = 'blog/index.html'
 
     
