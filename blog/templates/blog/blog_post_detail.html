@@ -1,0 +1,15 @@
+<h1> {{ post.title }} </h1>
+<p>
+    By: {{ post.author.first_name }} 
+    {{ post.author.last_name }}
+</p>
+<hr>
+{{ post.textcontent }}
+<hr>
+<small>
+    Published on: {{ post.created_on }}
+</small>
+<br>
+<br>
+
+<a href="{% url 'home' %}"> Back to Overview</a> >
