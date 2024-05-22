@@ -13,3 +13,9 @@
 .footer-icons {
     max-height: 35px;
 }
+
+/* main */
+/* Limit the height of the textarea fild */
+.textcontent{
+    max-height: 200px; 
+  }
