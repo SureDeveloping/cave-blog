@@ -31,10 +31,26 @@
                       <li class="nav-item">
                         <a class="nav-link aria-current="page" href="{% url 'home' %}">Home</a>
                       </li>
-                      <li class="nav-item">
-                        <a class="nav-link aria-current="page" href="{% url 'blog-post-create' %}">Create Blog Post</a>
-                      </li>
-                
+                      {% if user.is_authenticated %}
+                        <li class="nav-item">
+                          <a class="nav-link aria-current="page" href="{% url 'blog-post-create' %}">Create Blog Post</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link aria-current="page" href="{% url 'logout' %}">Logout</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link">{{ user.username }} is signed in</a>
+                        </li>
+
+                      {% else %}
+                        <li class="nav-item">
+                          <a class="nav-link aria-current="page" href="{% url 'register' %}">Register</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link aria-current="page" href="{% url 'login' %}">Login</a>
+                        </li>
+                      {% endif %}
+                      
                   </ul>
               </div>
           </div>

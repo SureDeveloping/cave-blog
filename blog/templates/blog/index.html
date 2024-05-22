@@ -11,14 +11,15 @@
             {{ post.author.first_name}} 
             {{ post.author.last_name}} <br>
             {{ post.textcontent}} <br>
-            <small> <a href="{% url 'blog-post-update' post.pk %}"> Edit Post</a> </small>
+            {% if user.is_authenticated %}
+                <small> <a href="{% url 'blog-post-update' post.pk %}"> Edit Post</a> </small>
 
-            <small> <a href="{% url 'blog-post-delete' post.pk %}"> Delite Post</a> </small>
-            
+                <small> <a href="{% url 'blog-post-delete' post.pk %}"> Delite Post</a> </small>
+            {% endif %}
             
         </li>
         
-{% endfor %}
+    {% endfor %}
 </ul>
 
 {% endblock %}
