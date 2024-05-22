@@ -6,6 +6,11 @@
 
 <h1> Login </h1> 
 
+{% for message in messages %}
+    <h3>{{ message }}</h3>
+{% endfor %} 
+
+
 <div class="form-group"> 
     <form method="POST">
         {% csrf_token %}
@@ -13,5 +18,7 @@
         <button type="submit" class="btn btn-primary">Login</button>
     </form>
 </div>
+
+<p>Don't have an account? <a href="{% url 'register' %}">Register here</a>.</p>
 
 {% endblock %}
