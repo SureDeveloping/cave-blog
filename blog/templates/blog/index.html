@@ -10,7 +10,10 @@
             <a href="{% url 'blog-post-detail' post.pk %}">   {{ post.title }}</a> by
             {{ post.author.first_name}} 
             {{ post.author.last_name}} <br>
-            {{ post.textcontent}} 
+            {{ post.textcontent}} <br>
+            <small> <a href="{% url 'blog-post-update' post.pk %}"> Edit Post</a> </small>
+            
+            
         </li>
         
 {% endfor %}
