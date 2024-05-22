@@ -10,7 +10,7 @@
     {{ post.author.last_name }}
 </p>
 <hr>
-{{ post.textcontent }}
+{{ post.textcontent  | linebreaksbr }}
 <hr>
 <small>
     Published on: {{ post.created_on }}

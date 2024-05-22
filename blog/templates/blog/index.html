@@ -10,7 +10,7 @@
             <a href="{% url 'blog-post-detail' post.pk %}">   {{ post.title }}</a> by
             {{ post.author.first_name}} 
             {{ post.author.last_name}} <br>
-            {{ post.textcontent|slice:":150" }}{% if post.textcontent|length > 200 %}...{% endif %} <br>
+            {{ post.textcontent|slice:":150"  | linebreaksbr }}{% if post.textcontent|length > 200 %}...{% endif %} <br>
             {% if user.is_authenticated %}
                 <small> <a href="{% url 'blog-post-update' post.pk %}"> Edit Post</a> </small>
 
