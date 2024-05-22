@@ -16,4 +16,4 @@ class Post(models.Model):
 
     # Redirect after post to detail view page
     def get_absolute_url(self):
-        return reverse('blog-post-detail', args=(str(self.id)))    
+        return reverse('blog-post-detail', args=(self.id,))    
