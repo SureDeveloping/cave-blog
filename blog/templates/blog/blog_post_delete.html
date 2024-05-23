@@ -3,19 +3,24 @@
 {% block content %}
 
 {% if user.is_authenticated %}
-    <h1> Delete: "{{ post.title }}" blog post.</h1> 
-    <br>
-    <h3> Are you sure you want delete this?</h3>
+    {% if user.id == post.author.id %}
+        <h1> Delete: "{{ post.title }}" blog post.</h1> 
+        <br>
+        <div class="alert alert-danger" role="alert"> Are you sure you want delete this?</div>
 
-    <div class="form-group"> 
-        <form method="POST">
-            {% csrf_token %}
-            <button type="submit" class="btn btn-primary">Delete Post</button>
-        </form>
-    </div>
+        <div class="form-group"> 
+            <form method="POST">
+                {% csrf_token %}
+                <button type="submit" class="btn btn-primary">Delete Post</button>
+            </form>
+        </div>
+
+    {% else %}
+    <div class="alert alert-danger" role="alert">You can only edit blog posts if you are the author!</div>
+    {% endif %}
 
 {% else %}
-    Please login if you want to delete a blog post!
+<div class="alert alert-danger" role="alert">Please login if you want to delete your blog post!</div>
 {% endif %}
 
 

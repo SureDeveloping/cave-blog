@@ -3,18 +3,23 @@
 {% block content %}
 
 {% if user.is_authenticated %}
-    <h1> Update your Post </h1> 
+    {% if user.id == post.author.id %}
+        <h1> Update your Post </h1> 
 
-    <div class="form-group"> 
-        <form method="POST">
-            {% csrf_token %}
-            {{ form.as_p }}
-            <button type="submit" class="btn btn-primary">Update</button>
-        </form>
-    </div>
+        <div class="form-group"> 
+            <form method="POST">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit" class="btn btn-primary">Update</button>
+            </form>
+        </div>
+
+    {% else %}
+        <div class="alert alert-danger" role="alert">You can only edit blog posts if you are the author!</div>
+    {% endif %}
 
 {% else %}
-    Please login if you want to edit a blog post!
+    <div class="alert alert-danger" role="alert">Please login if you want to edit your blog post!</div>
 {% endif %}
 
 {% endblock %}
