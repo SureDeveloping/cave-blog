@@ -3,7 +3,7 @@ from django.views.generic import ListView, DetailView, CreateView, UpdateView, D
 from .forms import PostForm, UpdateForm
 from .models import Post
 from django.urls import reverse_lazy
-
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 # Create your views here.
 # Overview with all blog posts
@@ -17,10 +17,15 @@ class BlogPostDetailView(DetailView):
     model = Post
     template_name = 'blog/blog_post_detail.html'
 
-class BlogPostCreateView(CreateView):
+class BlogPostCreateView(LoginRequiredMixin, CreateView):
     model = Post
     form_class = PostForm
     template_name = 'blog/blog_post_create.html'
+
+    # Set the logged-in user asauthor
+    def form_valid(self, form):
+        form.instance.author = self.request.user  
+        return super().form_valid(form)
 
 class BlogPostUpdateView(UpdateView):
     model = Post
