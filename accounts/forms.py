@@ -30,5 +30,5 @@ class UserProfileForm(forms.ModelForm):
             'website_url': forms.TextInput(attrs={'class': 'form-control textcontent'}),  
             'facebook_url': forms.TextInput(attrs={'class': 'form-control textcontent'}),  
             'instagram_url': forms.TextInput(attrs={'class': 'form-control textcontent'}),  
-            'profile_picture': forms.TextInput(attrs={'class': 'form-control textcontent'}),  
+            'profile_picture': forms.FileInput(attrs={'class': 'form-control textcontent'}),  
         }
