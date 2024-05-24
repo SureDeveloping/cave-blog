@@ -5,9 +5,6 @@
 {% if user.is_authenticated %}
         <h1>  Create your Userprofile </h1> 
 
-        {{ user.profile.userbio }}
-        <img src= "{{ post.author.profile.profile_picture.url }}"  max-width="200">
-
         <div class="form-group"> 
             <form method="POST">
                 {% csrf_token %}
