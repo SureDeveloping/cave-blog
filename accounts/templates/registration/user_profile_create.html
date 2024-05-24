@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block title %} Create your Userprofile {% endblock %}
+{% block content %}
+
+{% if user.is_authenticated %}
+        <h1>  Create your Userprofile </h1> 
+
+        {{ user.profile.userbio }}
+        <img src= "{{ post.author.profile.profile_picture.url }}"  max-width="200">
+
+        <div class="form-group"> 
+            <form method="POST">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit" class="btn btn-primary">Update</button>
+            </form>
+        </div>
+
+{% else %}
+    <div class="alert alert-danger" role="alert">Please login to your account if you want to create a Userprofile</div>
+{% endif %}
+
+{% endblock %}

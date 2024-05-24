@@ -1,6 +1,7 @@
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 from django import forms
+from . models import Profile
 
 class RegisterForm(UserCreationForm):
     email = forms.EmailField(widget=forms.EmailInput(attrs={'class': 'form-control'}))
@@ -17,3 +18,17 @@ class RegisterForm(UserCreationForm):
         self.fields['username'].widget.attrs['class'] = 'form-control'
         self.fields['password1'].widget.attrs['class'] = 'form-control'
         self.fields['password2'].widget.attrs['class'] = 'form-control'
+
+class UserProfileForm(forms.ModelForm):
+    class Meta:
+        model = Profile
+        fields = ('city', 'country', 'userbio', 'website_url', 'facebook_url', 'instagram_url', 'profile_picture')
+        widgets = {
+            'city': forms.TextInput(attrs={'class': 'form-control textcontent'}), 
+            'country': forms.TextInput(attrs={'class': 'form-control textcontent'}),
+            'userbio': forms.Textarea(attrs={'class': 'form-control textcontent'}),  
+            'website_url': forms.TextInput(attrs={'class': 'form-control textcontent'}),  
+            'facebook_url': forms.TextInput(attrs={'class': 'form-control textcontent'}),  
+            'instagram_url': forms.TextInput(attrs={'class': 'form-control textcontent'}),  
+            'profile_picture': forms.TextInput(attrs={'class': 'form-control textcontent'}),  
+        }

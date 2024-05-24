@@ -3,7 +3,9 @@ from django.views import generic
 from django.contrib.auth.forms import UserCreationForm
 from django.urls import reverse_lazy
 from django.contrib import messages
-from. forms import RegisterForm
+from . forms import RegisterForm, UserProfileForm
+from . models import Profile
+from django.views.generic import CreateView
 
 # Create your views here.
 
@@ -18,3 +20,11 @@ class UserCreationView(generic.CreateView):
         messages.success(self.request, self.success_message)
         return response
             
+class UserProfileCreationView(CreateView):
+    model = Profile
+    form_class = UserProfileForm
+    template_name = 'registration/user_profile_create.html'
+
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        return super().form_valid(form)
