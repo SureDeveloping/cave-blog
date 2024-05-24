@@ -44,11 +44,11 @@
                           <a class="nav-link aria-current="page" href="{% url 'logout' %}">Logout</a>
                         </li>
                     
-                        
-                        <li class="nav-item">
-                          <a class="nav-link aria-current="page" href="{% url 'user-profil-create' %}">Create User Profile</a>
-                        </li>
-                        
+                        {% if not request.user.profile  %}
+                          <li class="nav-item">
+                            <a class="nav-link aria-current="page" href="{% url 'user-profil-create' %}">Create User Profile</a>
+                          </li>
+                        {% endif %}
                      
                       {% else %}
                         <li class="nav-item">
