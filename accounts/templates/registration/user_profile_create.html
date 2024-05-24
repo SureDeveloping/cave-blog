@@ -3,6 +3,7 @@
 {% block content %}
 
 {% if user.is_authenticated %}
+    {% if not request.user.profile  %}
         <h1>  Create your Userprofile </h1> 
 
         <div class="form-group"> 
@@ -12,9 +13,13 @@
                 <button type="submit" class="btn btn-primary">Update</button>
             </form>
         </div>
+    {% else %}
+    {% else %}
+        <div class="alert alert-danger" role="alert">You have already a Userprofile!</div>
+    {% endif %}
 
 {% else %}
-    <div class="alert alert-danger" role="alert">Please login to your account if you want to create a Userprofile</div>
+    <div class="alert alert-danger" role="alert">Please login to your account if you want to create a Userprofile!</div>
 {% endif %}
 
 {% endblock %}
