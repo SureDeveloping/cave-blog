@@ -153,6 +153,6 @@ DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 CLOUDINARY_STORAGE = {
     'CLOUD_NAME': 'cave-blog',
-    'API_KEY': '598378459483864',
-    'API_SECRET': 'j-DNR_W3vguFG9009UntPN-ck28',
+    'API_KEY': os.environ.get("API_KEY"),
+    'API_SECRET': os.environ.get("API_SECRET"),
 }
