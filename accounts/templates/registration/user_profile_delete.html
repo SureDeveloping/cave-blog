@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block title %} Delete your Profile {% endblock %}
+{% block content %}
+
+{% if user.is_authenticated and user.id == profile.user_id %}
+    
+        <h1> Delete your Profile?</h1> 
+        <br>
+        <div class="alert alert-danger" role="alert"> {{ user.username }} are you sure you want delete your Profile?</div>
+
+        <div class="form-group"> 
+            <form method="POST">
+                {% csrf_token %}
+                <button type="submit" class="btn btn-primary">Delete Profile</button>
+            </form>
+        </div>
+
+{% else %}
+<div class="alert alert-danger" role="alert">Please login if you want to delete your Profile! <br>
+        You can only delite your own Profile!
+</div>
+{% endif %}
+
+
+{% endblock %}

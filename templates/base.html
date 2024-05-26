@@ -57,6 +57,10 @@
                             <a class="nav-link aria-current="page" href="{% url 'user-profil-update' user.profile.id %}">Update User Profile</a>
                         </li>
 
+                        <li class="nav-item">
+                            <a class="nav-link aria-current="page" href="{% url 'user-profil-delete' user.profile.id %}">Delete User Profile</a>
+                        </li>
+
                         {% endif %}
                      
                       {% else %}

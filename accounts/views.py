@@ -5,7 +5,7 @@ from django.urls import reverse_lazy, reverse
 from django.contrib import messages
 from . forms import RegisterForm, UserProfileForm, UserProfileUpdateForm
 from . models import Profile
-from django.views.generic import CreateView, DetailView
+from django.views.generic import CreateView, DetailView, DeleteView
 from django.views.generic.edit import UpdateView
 from django.contrib.auth.mixins import LoginRequiredMixin
 
@@ -64,3 +64,18 @@ def get_form(self, form_class=None):
             'email': user.email,
         }
         return form
+
+
+class UserProfileDeleteView(LoginRequiredMixin, DeleteView):
+    model = Profile
+    template_name = 'registration/user_profile_delete.html'
+    success_url = reverse_lazy('home')
+
+    def get_object(self, queryset=None):
+        return self.request.user.profile 
+
+    def delete(self, request, *args, **kwargs):
+        self.object = self.get_object()
+        success_url = self.get_success_url()
+        self.object.delete()
+        return HttpResponseRedirect(success_url)

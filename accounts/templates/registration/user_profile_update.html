@@ -2,7 +2,7 @@
 {% block title %} Update your Userprofile {% endblock %}
 {% block content %}
 
-{% if user.is_authenticated %}
+{% if user.is_authenticated and user.id == profile.user_id %}
 
     <h1>Update your Userprofile</h1>
     <div class="form-group"> 
@@ -14,7 +14,9 @@
         </form>
     </div>
 {% else %}
-    <div class="alert alert-danger" role="alert">Please login to your account if you want to update your Userprofile!</div>
+    <div class="alert alert-danger" role="alert">Please login to your account if you want to update your Userprofile! <br>
+        You can only update your own Profile!
+    </div>
 {% endif %}
 
 {% endblock %}
