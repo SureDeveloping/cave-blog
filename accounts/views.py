@@ -3,9 +3,12 @@ from django.views import generic
 from django.contrib.auth.forms import UserCreationForm
 from django.urls import reverse_lazy, reverse
 from django.contrib import messages
-from . forms import RegisterForm, UserProfileForm
+from . forms import RegisterForm, UserProfileForm, UserProfileUpdateForm
 from . models import Profile
 from django.views.generic import CreateView, DetailView
+from django.views.generic.edit import UpdateView
+from django.contrib.auth.mixins import LoginRequiredMixin
+
 
 # Create your views here.
 
@@ -42,3 +45,22 @@ class ProfilePageDetailView(DetailView):
         profile_page_user = get_object_or_404(Profile, id=self.kwargs['pk'])
         context["profile_page_user"] = profile_page_user
         return context
+
+class UserProfileUpdateView(UpdateView, LoginRequiredMixin):
+    model = Profile
+    form_class = UserProfileUpdateForm
+    template_name = 'registration/user_profile_update.html'
+    success_url = reverse_lazy('home')
+
+    def get_object(self, queryset=None):
+        return get_object_or_404(Profile, pk=self.kwargs['pk'])
+
+def get_form(self, form_class=None):
+        form = super().get_form(form_class)
+        profile = self.get_object()
+        form.initial = {
+            'first_name': user.first_name,
+            'last_name': user.last_name,
+            'email': user.email,
+        }
+        return form
