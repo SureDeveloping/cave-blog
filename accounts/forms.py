@@ -2,6 +2,8 @@ from django.contrib.auth.forms import UserCreationForm, UserChangeForm
 from django.contrib.auth.models import User
 from django import forms
 from . models import Profile
+from django_summernote.widgets import SummernoteWidget, SummernoteInplaceWidget
+
 
 class RegisterForm(UserCreationForm):
     email = forms.EmailField(widget=forms.EmailInput(attrs={'class': 'form-control'}))
@@ -26,7 +28,7 @@ class UserProfileForm(forms.ModelForm):
         widgets = {
             'city': forms.TextInput(attrs={'class': 'form-control textcontent'}), 
             'country': forms.TextInput(attrs={'class': 'form-control textcontent'}),
-            'userbio': forms.Textarea(attrs={'class': 'form-control textcontent'}),  
+            'userbio': SummernoteWidget(attrs={'class': 'form-control textcontent'}),  
             'website_url': forms.TextInput(attrs={'class': 'form-control textcontent'}),  
             'facebook_url': forms.TextInput(attrs={'class': 'form-control textcontent'}),  
             'instagram_url': forms.TextInput(attrs={'class': 'form-control textcontent'}),  
@@ -46,7 +48,7 @@ class UserProfileUpdateForm(forms.ModelForm):
     widgets = {
             'city': forms.TextInput(attrs={'class': 'form-control'}), 
             'country': forms.TextInput(attrs={'class': 'form-control'}),
-            'userbio': forms.Textarea(attrs={'class': 'form-control'}),  
+            'userbio': SummernoteWidget(attrs={'class': 'form-control textcontent'}),  
             'website_url': forms.TextInput(attrs={'class': 'form-control'}),  
             'facebook_url': forms.TextInput(attrs={'class': 'form-control'}),  
             'instagram_url': forms.TextInput(attrs={'class': 'form-control'}),  

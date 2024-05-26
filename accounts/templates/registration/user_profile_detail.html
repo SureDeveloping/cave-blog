@@ -44,7 +44,7 @@
                 <a href="{{ profile.instagram_url }}" class="">Instagram</a>
                 {% endif %}
               </div>
-              <p class="card-text">About Me: {{ profile.userbio }}</p>
+              <p class="card-text">About Me: {{ profile.userbio | safe }}</p>
             </div>
           </div>
         </div>
