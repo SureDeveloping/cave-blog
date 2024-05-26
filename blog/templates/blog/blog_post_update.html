@@ -10,6 +10,7 @@
             <form method="POST">
                 {% csrf_token %}
                 {{ form.as_p }}
+                {{ foobar|safe }}
                 <button type="submit" class="btn btn-primary">Update</button>
             </form>
         </div>

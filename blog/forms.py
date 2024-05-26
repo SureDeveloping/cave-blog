@@ -1,5 +1,6 @@
 from django import forms
 from .models import Post
+from django_summernote.widgets import SummernoteWidget, SummernoteInplaceWidget
 
 class PostForm(forms.ModelForm):
     class Meta:
@@ -9,7 +10,7 @@ class PostForm(forms.ModelForm):
         widgets = {
             'title': forms.TextInput(attrs={'class': 'form-control'}), 
             'author': forms.HiddenInput(), 
-            'textcontent': forms.Textarea(attrs={'class': 'form-control textcontent'}),  
+            'textcontent': SummernoteWidget(attrs={'class': 'form-control textcontent'}),  
         }
     
     def __init__(self, *args, **kwargs):
@@ -23,5 +24,5 @@ class UpdateForm(forms.ModelForm):
 
         widgets = {
             'title': forms.TextInput(attrs={'class': 'form-control'}), 
-            'textcontent': forms.Textarea(attrs={'class': 'form-control textcontent'}),  
+            'textcontent': SummernoteWidget(attrs={'class': 'form-control textcontent'}),  
         }
