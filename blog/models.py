@@ -17,3 +17,14 @@ class Post(models.Model):
     # Redirect after post to detail view page
     def get_absolute_url(self):
         return reverse('blog-post-detail', args=(self.id,))    
+
+class Comment(models.Model):
+    post =  models.ForeignKey(
+        Post, related_name="comments", on_delete=models.CASCADE)
+    commentator =  models.ForeignKey(
+        User, on_delete=models.CASCADE)
+    comment =  models.TextField()
+    created_on = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"{self.post.title} - {self.commentator.username}"
