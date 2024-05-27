@@ -1,6 +1,6 @@
 from django.shortcuts import render, reverse
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
-from .forms import PostForm, UpdateForm, CommentForm
+from .forms import PostForm, CommentForm
 from .models import Post, Comment
 from django.urls import reverse_lazy
 from django.contrib.auth.mixins import LoginRequiredMixin
@@ -28,8 +28,11 @@ class BlogPostCreateView(LoginRequiredMixin, CreateView):
 
 class BlogPostUpdateView(UpdateView):
     model = Post
-    form_class = UpdateForm
+    form_class = PostForm
     template_name = 'blog/blog_post_update.html'
+
+    def is_author(self, post):
+        return self.request.user == post.author   
 
 class BlogPostDeleteView(DeleteView):
     model = Post

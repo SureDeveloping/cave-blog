@@ -3,7 +3,7 @@
 {% block content %}
 
 {% if user.is_authenticated %}
-    {% if user.id == post.author.id %}
+    {% if user.pk == post.author.pk %}
         <h1> Delete: "{{ post.title }}" blog post.</h1> 
         <br>
         <div class="alert alert-danger" role="alert"> Are you sure you want delete this?</div>

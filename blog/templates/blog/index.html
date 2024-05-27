@@ -12,7 +12,7 @@
             {{ post.author.last_name}} <br>
             {{ post.textcontent|slice:":150"  | safe }}{% if post.textcontent|length > 200 %}...{% endif %} <br>
             {% if user.is_authenticated %}
-                {% if user.id == post.author.id %}
+                {% if user.pk == post.author.pk %}
                     <small> <a href="{% url 'blog-post-update' post.pk %}"> Edit Post</a> </small>
                     <small> <a href="{% url 'blog-post-delete' post.pk %}"> Delite Post</a> </small>
                 {% endif %}  
