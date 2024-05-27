@@ -10,7 +10,6 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 class HomeView(ListView):
     model = Post
     template_name = 'blog/index.html'
-    ordering = ['-created_on']
 
 # Datail view for one blog posts
 class BlogPostDetailView(DetailView):
