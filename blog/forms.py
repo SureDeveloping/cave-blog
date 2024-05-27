@@ -1,5 +1,5 @@
 from django import forms
-from .models import Post
+from .models import Post, Comment
 from django_summernote.widgets import SummernoteWidget, SummernoteInplaceWidget
 
 class PostForm(forms.ModelForm):
@@ -26,3 +26,13 @@ class UpdateForm(forms.ModelForm):
             'title': forms.TextInput(attrs={'class': 'form-control'}), 
             'textcontent': SummernoteWidget(attrs={'class': 'form-control textcontent'}),  
         }
+
+
+class CommentForm(forms.ModelForm):
+    class Meta:
+        model = Comment
+        fields = ('comment',)
+
+        widgets = {
+            'comment': forms.Textarea(attrs={'class': 'form-control textcontent'}), 
+        } 

@@ -1,7 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render, reverse
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
-from .forms import PostForm, UpdateForm
-from .models import Post
+from .forms import PostForm, UpdateForm, CommentForm
+from .models import Post, Comment
 from django.urls import reverse_lazy
 from django.contrib.auth.mixins import LoginRequiredMixin
 
@@ -36,3 +36,16 @@ class BlogPostDeleteView(DeleteView):
     model = Post
     template_name = 'blog/blog_post_delete.html'
     success_url = reverse_lazy('home')
+
+class CommentCreateView(LoginRequiredMixin, CreateView):
+    model = Comment
+    form_class = CommentForm
+    template_name = 'blog/comment_create.html'
+    
+    def form_valid(self, form):
+        form.instance.post = Post.objects.get(pk=self.kwargs['pk'])
+        form.instance.commentator = self.request.user
+        return super().form_valid(form)
+
+    def get_success_url(self):
+        return reverse('blog-post-detail', args=(self.kwargs['pk'],))

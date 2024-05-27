@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block title %} Make Your Comment {% endblock %}
+{% block content %}
+
+{% if user.is_authenticated %}
+    <h1> Create Comment </h1> 
+    <div class="form-group"> 
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn btn-primary">Comment</button>
+        </form>
+    </div>
+
+{% else %}
+    Please login if you want to create a blog post!
+{% endif %}
+
+{% endblock %}

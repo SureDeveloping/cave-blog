@@ -27,4 +27,17 @@
         {% endif %}
     {% endif %}
 
+    <h2>Comments</h2>
+    {% if not post.comments.all %}
+        <p> There are no comments yet.</p>
+        <a href="{% url 'comment-create' post.pk %}"> Add Comment </a>
+    {% else %} 
+        <a href="{% url 'comment-create' post.pk %}"> Add Comment </a>
+        {% for comment in post.comments.all %}
+            <h3>{{ comment.commentator }} </h3>
+            <samll> Added on {{ comment.created_on }} </samll>
+            <p> {{ comment.comment }}</p>
+
+        {% endfor %}
+    {% endif %}
 {% endblock %}
