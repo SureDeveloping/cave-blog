@@ -1,4 +1,4 @@
-from django.shortcuts import render, reverse
+from django.shortcuts import render, reverse, get_object_or_404
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from .forms import PostForm, CommentForm
 from .models import Post, Comment
@@ -51,3 +51,19 @@ class CommentCreateView(LoginRequiredMixin, CreateView):
 
     def get_success_url(self):
         return reverse('blog-post-detail', args=(self.kwargs['pk'],))
+
+class CommentUpdateView(LoginRequiredMixin, UpdateView):
+    model = Comment
+    form_class = CommentForm
+    template_name = 'blog/comment_update.html'
+
+    def get_object(self):
+        post = get_object_or_404(Post, pk=self.kwargs.get('post_pk'))
+        comment = get_object_or_404(Comment, pk=self.kwargs.get('pk'), post=post)
+        return comment
+    
+    def get_queryset(self):
+        return Comment.objects.filter(commentator=self.request.user)
+
+    def get_success_url(self):
+        return reverse_lazy('blog-post-detail', args=(self.object.post.pk,))

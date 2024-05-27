@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block title %} Make Your Comment {% endblock %}
+{% block content %}
+
+{% if user.is_authenticated %}
+    {% if user.pk == comment.commentator.pk %}  
+        <h1> Create Comment </h1> 
+        <div class="form-group"> 
+            <form method="POST">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit" class="btn btn-primary">Comment</button>
+            </form>
+        </div>
+
+    {% else %}
+        <div class="alert alert-danger" role="alert">You can only edit blog comments if you are the author!</div>
+    {% endif %}    
+
+{% else %}
+    Please login if you want to create comments!
+{% endif %}
+
+{% endblock %}
