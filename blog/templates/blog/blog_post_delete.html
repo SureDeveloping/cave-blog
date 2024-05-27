@@ -3,7 +3,7 @@
 {% block content %}
 
 {% if user.is_authenticated %}
-    {% if user.pk == post.author.pk %}
+    {% if user.id == post.author.id %}
         <h1> Delete: "{{ post.title }}" blog post.</h1> 
         <br>
         <div class="alert alert-danger" role="alert"> Are you sure you want delete this?</div>
@@ -16,11 +16,11 @@
         </div>
 
     {% else %}
-    <div class="alert alert-danger" role="alert">You can only edit blog posts if you are the author!</div>
+        <div class="alert alert-danger" role="alert">You can only edit blog posts if you are the author!</div>
     {% endif %}
 
 {% else %}
-<div class="alert alert-danger" role="alert">Please login if you want to delete your blog post!</div>
+    <div class="alert alert-danger" role="alert">Please login if you want to delete your blog post!</div>
 {% endif %}
 
 

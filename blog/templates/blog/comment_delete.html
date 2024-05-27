@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block title %} Make Your Comment {% endblock %}
+{% block content %}
+
+{% if user.is_authenticated %}
+    {% if user.pk == comment.commentator.pk %}  
+    <h1> Delete comment </h1> 
+    <br>
+    <div class="alert alert-danger" role="alert"> Are you sure you want delete this comment?</div>
+
+    <div class="form-group"> 
+        <form method="POST">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-primary">Delete Comment</button>
+        </form>
+    </div>
+
+    {% else %}
+        <div class="alert alert-danger" role="alert">You can only edit blog posts if you are the commentator!</div>
+    {% endif %}
+
+{% else %}
+    <div class="alert alert-danger" role="alert">Please login if you want to delete your Comment!</div>
+{% endif %}
+
+{% endblock %}

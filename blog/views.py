@@ -67,3 +67,18 @@ class CommentUpdateView(LoginRequiredMixin, UpdateView):
 
     def get_success_url(self):
         return reverse_lazy('blog-post-detail', args=(self.object.post.pk,))
+
+class CommentDeleteView(LoginRequiredMixin, DeleteView):
+    model = Comment
+    template_name = 'blog/comment_delete.html'
+
+    def get_object(self):
+        post = get_object_or_404(Post, pk=self.kwargs.get('post_pk'))
+        comment = get_object_or_404(Comment, pk=self.kwargs.get('pk'), post=post)
+        return comment
+    
+    def get_queryset(self):
+        return Comment.objects.filter(commentator=self.request.user)
+
+    def get_success_url(self):
+        return reverse_lazy('blog-post-detail', args=(self.object.post.pk,))
