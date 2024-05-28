@@ -34,6 +34,18 @@ class UserProfileForm(forms.ModelForm):
             'instagram_url': forms.TextInput(attrs={'class': 'form-control'}),  
             'profile_picture': forms.FileInput(attrs={'class': 'form-control'}),  
         }
+
+    userbio = forms.CharField(widget=SummernoteWidget(attrs={'summernote': {
+        'toolbar': [
+            ['style', ['bold', 'underline', 'clear']],
+            ['font', ['fontname']],
+            ['color', ['color']],
+            ['para', ['ul', 'ol', 'paragraph']],
+            ['table', ['table']],
+            ['insert', []],  # Exclude picture and video buttons
+            ['view', ['fullscreen', 'codeview', 'help']],
+        ],
+    }}))
         
 
 class UserProfileUpdateForm(forms.ModelForm):
@@ -74,3 +86,15 @@ class UserProfileUpdateForm(forms.ModelForm):
         user.email = self.cleaned_data['email']
         user.save()
         return profile
+
+    userbio = forms.CharField(widget=SummernoteWidget(attrs={'summernote': {
+        'toolbar': [
+            ['style', ['bold', 'underline', 'clear']],
+            ['font', ['fontname']],
+            ['color', ['color']],
+            ['para', ['ul', 'ol', 'paragraph']],
+            ['table', ['table']],
+            ['insert', []],  # Exclude picture and video buttons
+            ['view', ['fullscreen', 'codeview', 'help']],
+        ],
+    }}))
