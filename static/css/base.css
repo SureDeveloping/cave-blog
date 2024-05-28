@@ -14,6 +14,10 @@
     max-height: 35px;
 }
 
+#footer .bg-color-footer{
+    background-color: #0c7c59;
+}
+
 /* main */
 /* Limit the height of the textarea fild */
 .textcontent{
