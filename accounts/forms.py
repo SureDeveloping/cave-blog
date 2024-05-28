@@ -42,7 +42,7 @@ class UserProfileForm(forms.ModelForm):
             ['color', ['color']],
             ['para', ['ul', 'ol', 'paragraph']],
             ['table', ['table']],
-            ['insert', []],  # Exclude picture and video buttons
+            ['insert', []], 
             ['view', ['fullscreen', 'codeview', 'help']],
         ],
     }}))
@@ -94,7 +94,7 @@ class UserProfileUpdateForm(forms.ModelForm):
             ['color', ['color']],
             ['para', ['ul', 'ol', 'paragraph']],
             ['table', ['table']],
-            ['insert', []],  # Exclude picture and video buttons
+            ['insert', []], 
             ['view', ['fullscreen', 'codeview', 'help']],
         ],
     }}))

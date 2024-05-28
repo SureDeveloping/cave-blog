@@ -12,6 +12,18 @@ class PostForm(forms.ModelForm):
             'textcontent': SummernoteWidget(attrs={'class': 'form-control textcontent'}),  
         }
 
+    textcontent = forms.CharField(widget=SummernoteWidget(attrs={'summernote': {
+        'toolbar': [
+            ['style', ['bold', 'underline', 'clear']],
+            ['font', ['fontname']],
+            ['color', ['color']],
+            ['para', ['ul', 'ol', 'paragraph']],
+            ['table', ['table']],
+            ['insert', ['picture']], 
+            ['view', ['fullscreen', 'codeview', 'help']],
+        ],
+    }}))
+
 class CommentForm(forms.ModelForm):
     class Meta:
         model = Comment
