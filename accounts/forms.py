@@ -34,26 +34,24 @@ class UserProfileForm(forms.ModelForm):
             'instagram_url': forms.TextInput(attrs={'class': 'form-control'}),  
             'profile_picture': forms.FileInput(attrs={'class': 'form-control'}),  
         }
-
+        
 
 class UserProfileUpdateForm(forms.ModelForm):
     first_name = forms.CharField(max_length=100, widget=forms.TextInput(attrs={'class': 'form-control'}))
     last_name = forms.CharField(max_length=100, widget=forms.TextInput(attrs={'class': 'form-control'}))
     email = forms.EmailField(widget=forms.EmailInput(attrs={'class': 'form-control'}))
+    city = forms.CharField(required=False, max_length=100, widget=forms.TextInput(attrs={'class': 'form-control'}))
+    country = forms.CharField(required=False, max_length=100, widget=forms.TextInput(attrs={'class': 'form-control'}))
+    userbio = forms.CharField(widget=SummernoteWidget(attrs={'class': 'form-control'}))
+    website_url = forms.URLField(required=False, widget=forms.TextInput(attrs={'class': 'form-control'}))
+    facebook_url = forms.URLField(required=False, widget=forms.TextInput(attrs={'class': 'form-control'}))
+    instagram_url = forms.URLField(required=False, widget=forms.TextInput(attrs={'class': 'form-control'}))
+    profile_picture = forms.ImageField(required=False, widget=forms.FileInput(attrs={'class': 'form-control'}))
 
     class Meta:
         model = Profile
         fields = ['first_name', 'last_name', 'email', 'city', 'country', 'userbio', 'website_url', 'facebook_url', 'instagram_url', 'profile_picture']
     
-    widgets = {
-            'city': forms.TextInput(attrs={'class': 'form-control'}), 
-            'country': forms.TextInput(attrs={'class': 'form-control'}),
-            'userbio': SummernoteWidget(attrs={'class': 'form-control'}),  
-            'website_url': forms.TextInput(attrs={'class': 'form-control'}),  
-            'facebook_url': forms.TextInput(attrs={'class': 'form-control'}),  
-            'instagram_url': forms.TextInput(attrs={'class': 'form-control'}),  
-            'profile_picture': forms.FileInput(attrs={'class': 'form-control'}),  
-        }
 
     def __init__(self, *args, **kwargs):
         user = kwargs.pop('user', None)
