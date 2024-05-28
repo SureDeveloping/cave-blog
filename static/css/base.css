@@ -19,7 +19,6 @@
 }
 
 /* main */
-/* Limit the height of the textarea fild */
-.textcontent{
-    max-height: 200px; 
-  }
+.card-body img {
+    width:100%
+}
