@@ -50,10 +50,12 @@ class UserProfileUpdateView(UpdateView, LoginRequiredMixin):
     model = Profile
     form_class = UserProfileUpdateForm
     template_name = 'registration/user_profile_update.html'
-    success_url = reverse_lazy('home')
-
+    
     def get_object(self, queryset=None):
         return get_object_or_404(Profile, pk=self.kwargs['pk'])
+
+    def get_success_url(self):
+        return reverse_lazy('user-profil-detail', kwargs={'pk': self.object.pk})
 
 def get_form(self, form_class=None):
         form = super().get_form(form_class)
@@ -64,7 +66,6 @@ def get_form(self, form_class=None):
             'email': user.email,
         }
         return form
-
 
 class UserProfileDeleteView(LoginRequiredMixin, DeleteView):
     model = Profile
