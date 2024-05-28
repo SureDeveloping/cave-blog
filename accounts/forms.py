@@ -26,13 +26,13 @@ class UserProfileForm(forms.ModelForm):
         model = Profile
         fields = ('city', 'country', 'userbio', 'website_url', 'facebook_url', 'instagram_url', 'profile_picture')
         widgets = {
-            'city': forms.TextInput(attrs={'class': 'form-control textcontent'}), 
-            'country': forms.TextInput(attrs={'class': 'form-control textcontent'}),
-            'userbio': SummernoteWidget(attrs={'class': 'form-control textcontent'}),  
-            'website_url': forms.TextInput(attrs={'class': 'form-control textcontent'}),  
-            'facebook_url': forms.TextInput(attrs={'class': 'form-control textcontent'}),  
-            'instagram_url': forms.TextInput(attrs={'class': 'form-control textcontent'}),  
-            'profile_picture': forms.FileInput(attrs={'class': 'form-control textcontent'}),  
+            'city': forms.TextInput(attrs={'class': 'form-control'}), 
+            'country': forms.TextInput(attrs={'class': 'form-control'}),
+            'userbio': SummernoteWidget(attrs={'class': 'form-control'}),  
+            'website_url': forms.TextInput(attrs={'class': 'form-control'}),  
+            'facebook_url': forms.TextInput(attrs={'class': 'form-control'}),  
+            'instagram_url': forms.TextInput(attrs={'class': 'form-control'}),  
+            'profile_picture': forms.FileInput(attrs={'class': 'form-control'}),  
         }
 
 
@@ -48,7 +48,7 @@ class UserProfileUpdateForm(forms.ModelForm):
     widgets = {
             'city': forms.TextInput(attrs={'class': 'form-control'}), 
             'country': forms.TextInput(attrs={'class': 'form-control'}),
-            'userbio': SummernoteWidget(attrs={'class': 'form-control textcontent'}),  
+            'userbio': SummernoteWidget(attrs={'class': 'form-control'}),  
             'website_url': forms.TextInput(attrs={'class': 'form-control'}),  
             'facebook_url': forms.TextInput(attrs={'class': 'form-control'}),  
             'instagram_url': forms.TextInput(attrs={'class': 'form-control'}),  
