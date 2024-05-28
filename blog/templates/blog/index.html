@@ -3,23 +3,27 @@
 {% block title %}  Blog Posts {% endblock %}
 
 {% block content %}
-<h1> Blog Posts </h1>
-<ul> 
-    {% for post in object_list %}
-        <li> 
-            <a href="{% url 'blog-post-detail' post.pk %}">   {{ post.title }}</a> by
-            {{ post.author.first_name}} 
-            {{ post.author.last_name}} <br>
-            {{ post.textcontent|slice:":150"  | safe }}{% if post.textcontent|length > 200 %}...{% endif %} <br>
-            {% if user.is_authenticated %}
-                {% if user.pk == post.author.pk %}
-                    <small> <a href="{% url 'blog-post-update' post.pk %}"> Edit Post</a> </small>
-                    <small> <a href="{% url 'blog-post-delete' post.pk %}"> Delite Post</a> </small>
-                {% endif %}  
-            {% endif %}  
-        </li>
-        
-    {% endfor %}
-</ul>
+<div class="container">
+    <h1 class="mt-5 mb-4">Blog Posts</h1>
+
+    <div class="row">
+        {% for post in object_list %}
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title"><a href="{% url 'blog-post-detail' post.pk %}">{{ post.title }}</a></h5>
+                    <p class="card-text">{{ post.textcontent|slice:":150"|safe }}{% if post.textcontent|length > 200 %}...{% endif %}</p>
+                    <p class="card-text"><small class="text-muted">by {{ post.author.first_name }} {{ post.author.last_name }}</small></p>
+                    {% if user.is_authenticated %}
+                    {% if user.pk == post.author.pk %}
+                    <a href="{% url 'blog-post-update' post.pk %}" class="btn btn-sm btn-primary">Edit Post</a>
+                    <a href="{% url 'blog-post-delete' post.pk %}" class="btn btn-sm btn-primary">Delete Post</a>
+                    {% endif %}
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
 
 {% endblock %}
