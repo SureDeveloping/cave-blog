@@ -44,7 +44,15 @@
                 <div class="card-body">
                     <h5 class="card-title"><a href="{% url 'blog-post-detail' post.pk %}">{{ post.title }}</a></h5>
                     <p class="card-text">{{ post.textcontent|slice:":150"|safe }}{% if post.textcontent|length > 200 %}...{% endif %}</p>
-                    <p class="card-text"><small class="text-muted">by {{ post.author.first_name }} {{ post.author.last_name }}</small></p>
+                    
+                    <p class="card-text author-link"><small class="text-muted">by 
+                        {% if post.author.profile %}
+                            <a href="{% url 'user-profil-detail' post.author.profile.id %}">{{ post.author.get_full_name }}</a>
+                        {% else %}
+                            {{ post.author.get_full_name }}
+                        {% endif %}
+                    </small></p>
+                    
                     {% if user.is_authenticated %}
                     {% if user.pk == post.author.pk %}
                     <a href="{% url 'blog-post-update' post.pk %}" class="btn btn-sm btn-primary">Edit Post</a>

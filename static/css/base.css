@@ -64,6 +64,10 @@ main .btn {
     margin-right: 10px;
 }
 
+.author-link a {
+    color: black;
+}
+
 
 /* Footer */
 footer {
