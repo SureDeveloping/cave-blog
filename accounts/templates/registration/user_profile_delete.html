@@ -11,13 +11,13 @@
         <div class="form-group"> 
             <form method="POST">
                 {% csrf_token %}
-                <button type="submit" class="btn btn-primary">Delete Profile</button>
+                <button type="submit" class="btn btn-danger">Delete Profile</button>
             </form>
         </div>
 
 {% else %}
 <div class="alert alert-danger" role="alert">Please login if you want to delete your Profile! <br>
-        You can only delite your own Profile!
+    You can only delite your own Profile!
 </div>
 {% endif %}
 

@@ -9,7 +9,7 @@ class PostForm(forms.ModelForm):
 
         widgets = {
             'title': forms.TextInput(attrs={'class': 'form-control'}), 
-            'textcontent': SummernoteWidget(attrs={'class': 'form-control textcontent'}),  
+            'textcontent': SummernoteWidget(attrs={'class': 'form-control'}),  
         }
 
     textcontent = forms.CharField(widget=SummernoteWidget(attrs={'summernote': {
@@ -30,5 +30,5 @@ class CommentForm(forms.ModelForm):
         fields = ('comment',)
 
         widgets = {
-            'comment': forms.Textarea(attrs={'class': 'form-control textcontent'}), 
+            'comment': forms.Textarea(attrs={'class': 'form-control'}), 
         } 

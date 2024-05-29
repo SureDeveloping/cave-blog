@@ -20,15 +20,15 @@
     <title>{% block title %}Cave Blog{% endblock %}</title>
 </head>
 
-  <body>
+<body class="d-flex flex-column min-vh-100">
     <header> 
       <!-- Navbar from Bootstrap -->
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <nav class="navbar navbar-expand-lg navbar-dark" >
         <div class="container-fluid">
                 <a class="navbar-brand" href="{% url 'home' %}">Cave Blog</a>
 
                 {% if user.is_authenticated %}
-                    <a class="navbar-brand">{{ user.username }} is loged in</a>
+                    <a class="navbar-brand"> <strong> {{ user.username }} is loged in </strong> </a>
                 {% endif %}
                 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -44,10 +44,6 @@
                         {% if user.is_authenticated %}
                             <li class="nav-item">
                                 <a class="nav-link aria-current="page" href="{% url 'blog-post-create' %}">Create Blog Post</a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link aria-current="page" href="{% url 'logout' %}">Logout</a>
                             </li>
                                     
                             {% if not request.user.profile  %}
@@ -68,6 +64,10 @@
                                 </li>
 
                                 {% endif %}
+
+                            <li class="nav-item">
+                                <a class="nav-link aria-current="page" href="{% url 'logout' %}">Logout</a>
+                            </li>  
                      
                         {% else %}
                             <li class="nav-item">
@@ -84,12 +84,14 @@
         </nav>
     </header>
    
-    <main class="container">
+    <main class="flex-grow-1">
+        <div class="container"> 
         {% block content %}
         {% endblock %}
+        </div>
     </main>
 
-    <footer class="footer text-black py-4 bg-color-footer" id="footer">
+    <footer class="footer text-black py-4 bg-color-footer mt-auto" id="footer">
       <div class=" footer-text-container">
         <p>
           Cave Blog <br>
