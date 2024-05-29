@@ -9,8 +9,11 @@
             {% csrf_token %}
             {{ form.as_p }}
             <button type="submit" class="btn btn-primary">Comment</button>
+            <a href="{% url 'home' %}" class="btn btn-primary">Home</a >
         </form>
     </div>
+    
+    
 
 {% else %}
     Please login if you want to create a blog post!

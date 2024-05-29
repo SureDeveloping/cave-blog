@@ -60,6 +60,10 @@ main .alert-danger {
     background-color: white;
 }
 
+main .btn {
+    margin-right: 10px;
+}
+
 
 /* Footer */
 footer {

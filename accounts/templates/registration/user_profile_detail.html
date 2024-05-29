@@ -45,13 +45,17 @@
                                 {% endif %}                                
                             </div>
                             <p class="card-text">About Me: {{ profile.userbio | safe }}</p>
-                        </div>
+                        </div>                        
                     </div>
                 </div>
             </div>
+            
         </div>
+        
     </div>
+    <div class="d-grid gap-2 col-2 mx-auto mt-3"> <a href="{% url 'home' %}" class="btn btn-primary">Home</a> </div>
 </div>
+
 
 {% else %}
   <div class="alert alert-danger" role="alert">Please login to your account if you want to read a Userprofile!</div>

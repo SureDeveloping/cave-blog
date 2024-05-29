@@ -4,35 +4,36 @@
 
 {% block content %}
 
+{% if not user.is_authenticated %}
 <div class="container">
     <div class="jumbotron">
         <h1 class="display-4">
             Welcome to the Cave Blog!
         </h1>
-            <p class="lead">
-                This blog is dedicated to caving and cave exploration.
-                Whether you are a fan of natural dripstone caves or prefer to 
-                explore the mysterious passages of a mine, you've come to the right place.
-            </p>
-            <p>   
-                Our aim is to create a platform where like-minded people can share their 
-                experiences, exchange ideas and learn from each other. Whether you are an 
-                experienced speleologist or just starting to take an interest in the subject - everyone is welcome!
-            </p> 
-            <p>
-                Here you can describe your adventures in caves, share photos of impressive formations, 
-                ask questions, give tips and help others. Let's explore the fascinating world 
-                of caves together and inspire each other!
-            </p>
-            <p>
-                So, what are you waiting for? Create an account and share your first blog post 
-                with the community. We look forward to hearing about your experiences and discovering 
-                the beauty of the underground world together!</p>
-            </p>
-            <a href="{% url 'register' %}" class="btn btn-primary">Register here</a>
+        <p class="lead">
+            This blog is dedicated to caving and cave exploration.
+            Whether you are a fan of natural dripstone caves or prefer to 
+            explore the mysterious passages of a mine, you've come to the right place.
+        </p>
+        <p>   
+            Our aim is to create a platform where like-minded people can share their 
+            experiences, exchange ideas and learn from each other. Whether you are an 
+            experienced speleologist or just starting to take an interest in the subject - everyone is welcome!
+        </p> 
+        <p>
+            Here you can describe your adventures in caves, share photos of impressive formations, 
+            ask questions, give tips and help others. Let's explore the fascinating world 
+            of caves together and inspire each other!
+        </p>
+        <p>
+            So, what are you waiting for? Create an account and share your first blog post 
+            with the community. We look forward to hearing about your experiences and discovering 
+            the beauty of the underground world together!</p>
+        </p>
+        <a href="{% url 'register' %}" class="btn btn-primary">Register here</a>
 
-        </div>
-        
+    </div>
+{% endif %}
 
     <h2 class="mt-5 mb-4">Blog Posts</h1>
 
