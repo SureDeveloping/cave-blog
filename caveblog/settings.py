@@ -28,13 +28,29 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['8000-suredeveloping-caveblog-q30wuftp5vf.ws-eu114.gitpod.io',
                  '.herokuapp.com',
 
 ]
 
+SUMMERNOTE_CONFIG = {
+    'iframe': False,
+    'summernote': {
+        'width': '100%',
+        'height': '300px',
+        'toolbar': [
+            ['style', ['style']],
+            ['font', ['bold', 'italic', 'underline', 'clear']],
+            ['para', ['ul', 'ol']],
+            ['insert', ['link', 'picture', 'video']],
+            ['view', ['fullscreen', 'codeview']],
+        ],
+        'disableResizeEditor': True,
+        'styleTags': ['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6'],
+    },
+}
 
 # Application definition
 
