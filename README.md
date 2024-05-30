@@ -7,11 +7,12 @@ Portfolio Project 4 – User SureDeveloping – Code Institute
 ## Contents
 [Contents](#contents) \
 [User experience (UX)](#user-experience)\
+    [Project goals](#target-audience)\
     [Target audience](#target-audience)\
     [User requirements and expectations](#user-requirements-and-expectations)\
 [Epics and user stories](#user-story)\
-    [Initial epics for an MVP)](#initial-epics-for-an-mvp)\
-    [Initial userstories for an MVP)](#initial-userstories-for-an-mvp)\
+    [Initial epics)](#initial-epics-for-an-mvp)\
+    [Initial userstories )](#initial-userstories-for-an-mvp)\
 [Design](#design) \
     [Color](#color) \
     [Typography](#typography) \
@@ -51,37 +52,92 @@ Portfolio Project 4 – User SureDeveloping – Code Institute
 [Acknowledgments](#acknowledgments)
 
 ## User experience (UX)
-### Target audience
+### Project goal
+The main goal of the project is it to offer an exchange opportunity for people who like caves and visit them.
 
+### Target audience
 The main target group in are:
 * People who like to visit caves and share their experiences.
 * People who want to find out about caves they might want to visit.
 
-
-
-### User story
+### User requirements and expectations
 As a first time user of the website, you want to:
+* know what the website is about.
+* read existing blog posts.
+* register and create a new user account.
+* login and logout.
+* comment on existing blog posts.
+* create a first blog post.
 
-As a frequent user of the website, you want to:
+As a frequent user of the website, I want to:
+* login and logout.
+* Update existing blog posts and comments.
+* Read new blog posts and comments.
+* create a new blog posts.
+* comment on a blog posts.
 
-Objective of the website operator is to:
+As operator of the website I want to:
+* provide an easy to navigate and intuitive website.
+* provide a feedback of all user inputs.
+* provide an error free website.
+* provide an a useful and fun app to many users.
+* Provide the possibility to create, read, update and delete blogposts, comments and userprofiles.
 
-How this requirements are met:
-- 
+### Epics and user stories
+## Initial epics
+* A blog post app with CRUD function. Create a post, update post, detail post and delete a post. 
+* A welcome section on top of the Homepage, followed from all existing blog posts as an overview.
+* Database and admin setup
+* Register page with form
+* Login page with form
+* Navigation bar that shows the logged in user
+* An account app with all user profiles with CRUD functionality
+* A Comment function for the blog posts with CRUD functionality
+
+## Initial user stories
+* As a user, I want like to know what the website is about and made for
+* As a user i want to see all Blog postes
+* As a admin i want to have the overall control of the website
+* As a user, I want to create my own account
+* As a user, I want to login my own account
+* As a user, I want to navigate through the subpages of the website when iam login
+* As a user i want to write my post with a rich text editor for eaysy handling and styling
+* As a user i want to create a blog post
+* As a user i want to update a blog post
+* As a user i want to read a blog posts
+* As a user i want to delite a blog post
+* As a user, I would like to protect my blog entries from unauthorized editing or deletion
+* As a user I would like to be automatically noted as author when I create a new post editing or deletion
+* As a user i want to create a comment
+* As a user i want to update a comment
+* As a user i want to read a comment
+* As a user i want to delite a comment
+* As a user i want to create a Userprofile
+* As a user i want to update a  Userprofile
+* As a user i want to read my Userprofile
+* As a user i want to delite my Userprofile
+
 ## Design
 ### Color scheme
-I used the website https://coolors.co/ to find colors that go together. They should be bright and friendly.
-![Color palette1](assets/images/readme/color1.png "Color palette1")
-Finally, I checked the contrast again with the page https://contrast-grid.eightshapes.com/
-![Color palette2](assets/images/readme/color2.png "Color palette2")
+I used the website [Coolors](https://coolors.com/) to find colors that go together. 
+
+![Color palette1](docs/readme_images/coolors.png "Color palette1")
+
+Finally, I checked the contrast again with [Contrast-grid](contrast-grid.eightshapes.com/). I added here the red and blue. These are bootstrap standart coolor which i used for the buttons. 
+
+![Color palette2](docs/readme_images/contrast-grid.png "Color palette2")
+
 ### Typography
-The fonts come from googlefonds and were used for the following fonts:
+Tho font in the project is PT Sans, a sans-serif googlefonds
 
 ### Imagery
-Images used are from the site freepiks.
-https://www.freepik.com/. <br>
+There is only one images in this project. The default userprofile picture is a picture from [Freepik](https://freepik.com/).
+The uplosding funtion is deactivated. The uploading function with cloudinary was not working shorly before the deployment. This function will be added in a later realize.
 
 ### Wireframe
+
+
+
 Wireframe screenshot for the start page:
 
 ![wireframe start page](link.png "Wireframe from Start page")
