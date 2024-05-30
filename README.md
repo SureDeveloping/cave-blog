@@ -1,112 +1,157 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# ReadME - Project Instruction
+Portfolio Project 4 – User SureDeveloping – Code Institute
+## Introduction
+"The website is a blog focused on caves. It's a place where cave enthusiasts can share their experiences by creating posts. Users can also comment on each other's posts. To get started, users need to set up a user accont. The blog is meant to be a space for like-minded individuals to connect, share experiences, and offer tips and advice for future cave visits.<br>
+[Link to the deployed Project](https://cave-blog-5fd1224bbbc5.herokuapp.com/)
 
-Welcome Stephan Sure,
+## Contents
+[Contents](#contents) \
+[User experience (UX)](#user-experience)\
+    [Target audience](#target-audience)\
+    [User requirements and expectations](#user-requirements-and-expectations)\
+[Epics and user stories](#user-story)\
+    [Initial epics for an MVP)](#initial-epics-for-an-mvp)\
+    [Initial userstories for an MVP)](#initial-userstories-for-an-mvp)\
+[Design](#design) \
+    [Color](#color) \
+    [Typography](#typography) \
+    [Imagery](#imagery) \
+[Wireframe](#wireframe) \
+    [Homepage](#homepage) \
+    [Create blog post](#create-blog-post) \
+    [Update blog post](#update-blog-post) \
+    [Delete blog post](#delete-blog-post) \
+    [My profile](#my-profile) \
+    [Update profile](#update-profile) \
+    [Delete profile](#delete-profile) \
+    [Logout](#logout) \
+    [Register](#register) \
+[Database Schema](#database-schema) \
+    [Entity relationship diagram](#entity-relationship-diagram) \
+[Features](#features) \
+    [Implemented features](#implemented-features) \
+    [Future features](#futur-features) \
+[Technologies used](#technologies-used) \
+    [Languages and framework](#languages-and-framework) \
+    [Database](#database) \
+    [Technologies and tools](#technologies-and-tools) \
+[Deployment](#deployment) \
+    [Pre deployment](#pre-deployment) \
+    [Deploying with heroku](#deploying-with-heroku) \
+    [Fork the repository](#fork-the-repository) \
+    [Clone the repository](#clone-the-repository) \
+[Testing](#testing) \
+    [Manual testing](#manual-testing) \
+    [Tool testing](#tool-testing) \
+    [Fixed bugs](#tool-testing) \
+    [Known unfixed bugs](#known-unfixed-bugs) \
+[Credits](#credits) \
+    [Code materials used](#code-materials-used) \
+    [Content on the website](#content-on-the-website) \
+[Acknowledgments](#acknowledgments)
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+## User experience (UX)
+### Target audience
 
-You can safely delete this README.md file or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **April 26, 2024**
+The main target group in are:
+* People who like to visit caves and share their experiences.
+* People who want to find out about caves they might want to visit.
 
-## Gitpod Reminders
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
 
-`python3 -m http.server`
+### User story
+As a first time user of the website, you want to:
 
-A blue button should appear to click: _Make Public_,
+As a frequent user of the website, you want to:
 
-Another blue button should appear to click: _Open Browser_.
+Objective of the website operator is to:
 
-To run a backend Python file, type `python3 app.py` if your Python file is named `app.py`, of course.
+How this requirements are met:
+- 
+## Design
+### Color scheme
+I used the website https://coolors.co/ to find colors that go together. They should be bright and friendly.
+![Color palette1](assets/images/readme/color1.png "Color palette1")
+Finally, I checked the contrast again with the page https://contrast-grid.eightshapes.com/
+![Color palette2](assets/images/readme/color2.png "Color palette2")
+### Typography
+The fonts come from googlefonds and were used for the following fonts:
 
-A blue button should appear to click: _Make Public_,
+### Imagery
+Images used are from the site freepiks.
+https://www.freepik.com/. <br>
 
-Another blue button should appear to click: _Open Browser_.
+### Wireframe
+Wireframe screenshot for the start page:
 
-By Default, Gitpod gives you superuser security privileges. Therefore, you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+![wireframe start page](link.png "Wireframe from Start page")
 
-To log into the Heroku toolbelt CLI:
+### Features
+The website is a Blog about caves. 
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+### Accessibility
+To ensure Accessibility the following things were done:
+- I used semantic HTML.
+- I used descriptive alt attributes for images.
+- I provided information for screen readers.
+- I used good color contrast and a tested color palette.
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you, so do not share it. If you accidentally make it public, you can create a new one with _Regenerate API Key_.
+## Technologies used
+### Languages used
+HTML, CSS and Java Script were used for this project.
+### Software used
+Balsamiq - To create a wireframe. <br>
+Gitpod - To code the website. <br>
+Git - For version control. <br>
+Github - To store and deploy the website. <br>
+Google Fonts - All fonts used are from google fonts. <br>
+gauger.io/fonticon - To create a favicon. <br>
+Google Dev Tools, and Lighthouse - For troubleshooting testing and fixing bugs. <br>
+Deepl - For translating text. <br>
+Birme - To change the image to webp format and reducing the size of the images. <br>
+Am I Responsive? - To check if the page is responsive. <br>
+## Deployment
+The project was coded with gipod and then deployed on heroku. That is how the deployment was done:
 
-------
+## Testing
+The page was tested on different ways and different errors came to light. All tests are listes on a seperate page. Please follow the link.
+ [Link to the testing page](https://cave-blog-5fd1224bbbc5.herokuapp.com/)
 
-## Release History
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+### Solved bugs
+- 
+### Known unsolved bugs
+- There are ...
+## Credits
+### Code used
+- I used th
 
-**April 26 2024:** Update node version to 16
+### Content on the website
+The content of this project was written by Stephan Sure und the held of the ai toll of chatgpt.
+### Learning materials
+- All content from nnline course in "Full Stack Software Developmen" especially videos about Portfolio Project 2 and ReadME from Code Instituet
+- https://www.youtube.com/watch?v=40vLxYUJiQY&list=PL_7334VduOHvzZYlgy_0kZLcic2NINCUt&index=6 - Video about the Profolio Project 2
+- https://www.youtube.com/watch?v=U9VF-4euyRo&t=831s - Video about css and clamp function
+- https://www.youtube.com/watch?v=eHPLTDOAggc - To lern how to make the buttons work
+- https://www.youtube.com/watch?v=riDzcEQbX6k - How to bulid a quizz with java script
+- https://www.youtube.com/playlist?list=PLB6wlEeCDJ5Yyh6P2N6Q_9JijB6v4UejF  - How to bulid a quizz with java script
+- https://www.youtube.com/watch?v=PBcqGxrr9g8 - How to bulid a quizz with java script
+- https://developer.mozilla.org/en-US/docs/Web/API/setTimeout - Timeout function
+- https://www.w3schools.com/jsref/event_onclick.asp  - To lern how to make the buttons work
+- https://www.youtube.com/watch?v=xVMkFJZhZYU&t=283s - To lern how to make the buttons work
+- https://werner-zenk.de/javascript/html-button_ueber_javascript_eine_funktion_zuweisen.php - To lern how to make the buttons work
+- https://www.youtube.com/watch?v=P6UgYq3J3Qs - To learn more about position absolut and relative
+- https://www.youtube.com/shorts/9cSL5dP4rgM - To learn more about position absolut and relative
+- https://stackoverflow.com/
+- https://www.w3schools.com/css/
+- geekforgeeks
+- W3Schools
+### Acknowledgments
+I like to thank the follow persons for the help during the project:
+- My Code Institute mentor Spencer Barriball.
+- The Tutor Support team at Code Institute.
+- Slack pear groupe especially James Evans.
+- All the people who make their knowledge available for free on YouTube.
 
-**September 20 2023:** Update Python version to 3.9.17.
+**This project is for educational use only and was created for the Code Institute course Full stack software development by Stephan Sure.**
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
-
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
-
-**July 2 2021:** Remove extensions that are not available in Open VSX.
-
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
-
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
-
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
-
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
-
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
-
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
-
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
-------
-
-## FAQ about the uptime script
-
-**Why have you added this script?**
-
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!
