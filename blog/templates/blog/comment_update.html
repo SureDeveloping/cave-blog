@@ -4,12 +4,12 @@
 
 {% if user.is_authenticated %}
     {% if user.pk == comment.commentator.pk %}  
-        <h1> Create Comment </h1> 
+        <h1> Update Comment </h1> 
         <div class="form-group"> 
             <form method="POST">
                 {% csrf_token %}
                 {{ form.as_p }}
-                <button type="submit" class="btn btn-primary">Comment</button>
+                <button type="submit" class="btn btn-primary">Update</button>
                 <a href="{% url 'home' %}" class="btn btn-primary">Home</a >
             </form>
         </div>
