@@ -176,99 +176,130 @@ Tho font in the project is PT Sans, a sans-serif googlefonds.
 There is only one images in this project. The default userprofile picture is a picture from [Freepik](https://freepik.com/).
 The uplosding funtion is deactivated. The uploading function with cloudinary was not working shorly before the deployment. This function will be added in a later realize.
 
-### Wireframe
+## Wireframe
 To get an idea of the look of the individual web pages, wireframes were created in advance for each page.
 
-Wireframe for the homepage:
+Wireframe for the homepage: <br>
 ![wireframe homepage](docs/readme_images/wireframe-blog-overview.webp "Wireframe homepage")
 
-Wireframe for the register page:
+Wireframe for the register page: <br>
 ![wireframe register page](docs/readme_images/wireframe-register.webp "Wireframe register page")
 
-Wireframe for the login page:
+Wireframe for the login page: <br>
 ![wireframe login page](docs/readme_images/wireframe-login.webp "Wireframe login page")
 
-Wireframe for the create blog post page:
+Wireframe for the create blog post page: <br>
 ![wireframe blog post create page](docs/readme_images/wireframe-blog-create.webp "wireframe blog post create page")
 
-Wireframe for the update blog post page:
+Wireframe for the update blog post page: <br>
 ![wireframe blog post update page](docs/readme_images/wireframe-blog-update.webp "wireframe blog post update page")
 
-Wireframe for the delete blog post page:
+Wireframe for the delete blog post page: <br>
 ![wireframe blog post delete page](docs/readme_images/wireframe-blog-delete.webp "wireframe blog post delete page")
 
-Wireframe for the detail blog post page:
+Wireframe for the detail blog post page: <br>
 ![wireframe blog post delete page](docs/readme_images/wireframe-blog-detail.webp "wireframe blog post delete page")
 
-Wireframe for the create userprofile page:
+Wireframe for the create userprofile page: <br>
 ![wireframe userprofile create page](docs/readme_images/wireframe-userprofile-create.webp "wireframe userprofile create page")
 
-Wireframe for the update userprofile page:
+Wireframe for the update userprofile page: <br>
 ![wireframe userprofile update page](docs/readme_images/wireframe-userprofile-update.webp "wireframe userprofile update page")
 
-Wireframe for the userprofile page:
+Wireframe for the userprofile page: <br>
 ![wireframe userprofile](docs/readme_images/wireframe-userprofil.webp "wireframe userprofile")
 
-Wireframe for the delete userprofile page:
+Wireframe for the delete userprofile page: <br>
 ![wireframe delete userprofile page](docs/readme_images/wireframe-userprofile-delete.webp "wireframe delete userprofile page")
 
-Wireframe for the comment overview on the blog detail page:
+Wireframe for the comment overview on the blog detail page: <br>
 ![wireframe comment overview](docs/readme_images/wireframe-blog-detail-comment.webp "wireframe comment overview")
 
-Wireframe for the create comment page:
+Wireframe for the create comment page: <br>
 ![wireframe comment create](docs/readme_images/wireframe-comment-create.webp "wireframe comment create")
 
-Wireframe for the update comment page:
+Wireframe for the update comment page: <br>
 ![wireframe comment update](docs/readme_images/wireframe-comment-update.webp "wireframe comment update")
 
-Wireframe for the delete comment page:
+Wireframe for the delete comment page: <br>
 ![wireframe comment delete](docs/readme_images/wireframe-comment-delete.webp "wireframe comment delete")
 
-### Features
-The homepage
-![wireframe homepage](docs/readme_images/wireframe-blog-overview.webp "Wireframe homepage")
+## Features
+All pages of the project have a navigation bar, a main line and a footer. 
+The footer always remains the same and does not change. It consists of an address and links to social networks. 
+The navigation bar changes depending on whether and which user is logged in. The content of the main section changes depending on which page is currently being viewed. These are described in more detail below.
 
-Wireframe for the register page:
-![wireframe register page](docs/readme_images/wireframe-register.webp "Wireframe register page")
+### The homepage, overview page
+If no user is logged in the navebar looks like this. On the top left there is the page name "Cave Blog". Next to it following links to the right to the Home, Register, and Login page. <br>
+At the top of the main section there is a welcome text followed by a button that leads to the register page. <br>
+After the welcome section, all blog posts are listed. On a large screen always 3 next to each other. On mobile devices, all posts are displayed one below the other. The title of each block post is a link that leads to the detailed view of the respective post. The block post text is followed by the author of the post. This is also clickable and leads to the user profile of the author. 
+<br>
+Homepage on big screens: <br>
+![Homepage an big screens](docs/readme_images/features-homepage-big-screen.png "Homepage an big screens")
 
-Wireframe for the login page:
-![wireframe login page](docs/readme_images/wireframe-login.webp "Wireframe login page")
+Homepage on small screens: <br>
+![Homepage on smalle screens](docs/readme_images/features-homepage-smale-screen.png "Homepage on smalle screens")
+<br>
+When a user is logged in, the navigation bar changes. Between the website name “Cave Blog” and the homepage link the username of the logged in user is displayed “Username is logged in”. The links to the register page and to the login have disappeared. Instead of these links, the link to the Create Blog Post page, Create User Profile Profile page and the link to the Logout page are located to the right of the Home link. <br>
+The welcome text is also removed and the blog post overview follows directly. A button has appeared under the heading which leads to the Create Post page. If the author has already created a post, two buttons appear under the respective post. One leads to the Update page of the post, the other to the Delete page for the post. 
+<br>
+Homepage with a logged in user: <br>
+![Homepage with a logged in user](docs/readme_images/features-homepage-user-loggin.png "Homepage with a logged in user")
 
-Wireframe for the create blog post page:
-![wireframe blog post create page](docs/readme_images/wireframe-blog-create.webp "wireframe blog post create page")
+### Register page
+The register page is a form with fields for Username, Frist name, Last name, Email and Password and Password confirmation. There are buttons to submit the form and a button to return to the homepage if you do not want to register. There is also a link to the login page, if you already have an account, you can log in there. <br>
+![Register page](docs/readme_images/features-register-page.png "Register page")
 
-Wireframe for the update blog post page:
-![wireframe blog post update page](docs/readme_images/wireframe-blog-update.webp "wireframe blog post update page")
+### Login page
+The login page is a form. It has a field for the user name and a password field. Then there is a button to log in and send the form. Next to it is a button that leads back to the homepage. Below the button is a link that leads to the register page if you do not have an account. <br>
+![Login page](docs/readme_images/features-login-page.png "Login page")
 
-Wireframe for the delete blog post page:
-![wireframe blog post delete page](docs/readme_images/wireframe-blog-delete.webp "wireframe blog post delete page")
+### Userprofile
+The Create your user profile page is a form. The first field is the city of the user. This is followed by the country and the user bio with a buzzer node text field. This is followed by a field for a website, a Facebook account and an Instagram account. Below this form is a button to submit the form, the "Create" button and a "Home" button that leads back to the homepage. <br>
 
-Wireframe for the detail blog post page:
-![wireframe blog post delete page](docs/readme_images/wireframe-blog-detail.webp "wireframe blog post delete page")
+Create your userprofile page:  <br>
+![Create your userprofil page](docs/readme_images/features-homepage-create-your-userprofile.png "Create your userprofile page")
 
-Wireframe for the create userprofile page:
-![wireframe userprofile create page](docs/readme_images/wireframe-userprofile-create.webp "wireframe userprofile create page")
+The My Profile page shows the user profile of the logged in user. The username, first name, last name, city, country, links to the website, Facebook and Instergram and an about me text of the user are displayed. On the lift of this content there is a placeholder for a userprofile picture. The feature to upload a personal picture will be added in the next realise.
+Below this card there are links to the homepage, one to Update the User Profile page and to the delete the Profile.<br>
+My profile page:  <br>
+![My profile page](docs/readme_images/features-homepage-my-profile-page.png "My profile page")
 
-Wireframe for the update userprofile page:
-![wireframe userprofile update page](docs/readme_images/wireframe-userprofile-update.webp "wireframe userprofile update page")
+The delete your user profile contains a note. “Username” are you sure you want delete your Profile?" Below this note there is a Delete Profile button that deletes the profile and a button that takes you back to the homepage. <br>
+Delete your Profile page:  <br>
+![Delete your user profile page](docs/readme_images/features-homepage-delete-your-userprofile.png "Delete your user profile page")
 
-Wireframe for the userprofile page:
-![wireframe userprofile](docs/readme_images/wireframe-userprofil.webp "wireframe userprofile")
+The Update your user profile page is the same form like the create your user profile page form. The form is fild with the existing data. The user now can edit and update it. Below the form there is one button to Update the form and next to it a button which leads back to the homepage. <br>
+Delete your Profile page:  <br>
+![Delete your user profile page](docs/readme_images/features-homepage-update-your-userprofile.png "Delete your user profile page")
 
-Wireframe for the delete userprofile page:
-![wireframe delete userprofile page](docs/readme_images/wireframe-userprofile-delete.webp "wireframe delete userprofile page")
+If a user looks at another user profile. This page is structured in exactly the same way as the user's own profile. On the left is the placeholder for the profile picture. The user name is at the top right. Then first name, last name, city, country and the About Me text. Below this card is a button back to the homepage. 
+![Delete comments page](docs/readme_images/features-homepage-userprofile-user-not-logged-in.png "Delete comments page")
 
-Wireframe for the comment overview on the blog detail page:
-![wireframe comment overview](docs/readme_images/wireframe-blog-detail-comment.webp "wireframe comment overview")
+### Blog posts and comments
+The Create your Post page is a form consisting of a field for the title of the post. This is followed by a text content field with a summernode text editor for designing the text. The form fields are followed by two buttons. One to save the field and the other to return to the homepage. <br>
 
-Wireframe for the create comment page:
-![wireframe comment create](docs/readme_images/wireframe-comment-create.webp "wireframe comment create")
+Create your post page:  <br>
+![Create your Post page](docs/readme_images/features-homepage-create-your-post.png "Create your Post page")
 
-Wireframe for the update comment page:
-![wireframe comment update](docs/readme_images/wireframe-comment-update.webp "wireframe comment update")
+The detail page of Blog post is structured as follows. At the top is the title of the post. Below that is the author. This is a link and leads to the author's profile page, if the author has a profile page. Then you can read the text of the post and the publication date. Under this text there are 3 buttons. The first button leads back to the homepage. The second button opens the edit post page. Next to it is the delite post button which can be used to delete the post. The delete post and the update post button are only visible of the author ist loggied in who created the first in the first place.  <br> 
+Below the post part is the comment section. If there are no comments yet, you can read the text “There are no comments yet.” followed by a button “Add Comment”. If there are comments, this text disappears and the existing comments are shown. 
 
-Wireframe for the delete comment page:
-![wireframe comment delete](docs/readme_images/wireframe-comment-delete.webp "wireframe comment delete")
+Detail Blog post page with author logged in and without comments: 
+![Detail blog post page](docs/readme_images/features-homepage-blog-post-detail.png "Detail blog post page")
+
+The buttons for updating and deleting the post are missing if the user who created the post is not logged in. If the author of the post does not have a profile page, the link at the author name of the post is also missing. If comments are available, they are listed below the Add Comments button. If the comment author of one of the listed comments is logged in, there are buttons below this comment. One button to update the comment and another to delete the comment. 
+
+Detail Blog post page with comments: 
+![Detail blog post page with comments](docs/readme_images/features-homepage-blog-post-detail-comment.png "Detail blog post page with comments")
+
+Delete blog post page: 
+The blog post delete page looks similar to the user profile delete page. At the top is the tile of the post followed by the question “Are you sure you want delete this?”. After this question follows a button to delete the post and next to this button is a home button that leads back to the homepage. 
+![Delete blog post page](docs/readme_images/features-homepage-blog-post-delete.png "Delete blog post page")
+
+Delete comments page: 
+The delete comment page also consists of a warning question below which there are two buttons. One button to delete the comment, the other to go back to the homepage.
+![Delete comments page](docs/readme_images/features-homepage-comment-delete.png "Delete comments page")
 
 
 ### Accessibility

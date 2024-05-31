@@ -6,11 +6,14 @@
 
 <div class="mb-20">
     <div class="mb-10">
-        <h1> {{ post.title }} </h1> 
-        <p>
-            By: {{ post.author.first_name }} 
-            {{ post.author.last_name }}
-        </p>
+        <h1> {{ post.title }} </h1>     
+        <p> By:  
+            {% if post.author.profile %}
+                <a href="{% url 'user-profil-detail' post.author.profile.id %}">{{ post.author.get_full_name }}</a>
+            {% else %}
+                {{ post.author.get_full_name }}
+            {% endif %}
+        </p>           
         <p>{{ post.textcontent | safe }}</p>
         <small>Published on: {{ post.created_on }}</small>
     </div>  
