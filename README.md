@@ -19,8 +19,7 @@ Portfolio Project 4 – User SureDeveloping – Code Institute
     [Typography](#typography) \
     [Imagery](#imagery) \
 [Wireframe](#wireframe) \
-[Database Schema](#database-schema) \
-    [Entity relationship diagram](#entity-relationship-diagram) \
+[Entity relationship diagram](#entity-relationship-diagram) \
 [Features](#features) \
     [Implemented features](#implemented-features) \
     [Future features](#futur-features) \
@@ -45,7 +44,7 @@ Portfolio Project 4 – User SureDeveloping – Code Institute
 
 ## User experience (UX)
 ### Project goal
-The main goal of the project is it to offer an exchange opportunity for people who like caves and visit them.
+The main goal of the project is it to offer an exchange opportunity for people who like caves and visit them. An easy and fun to use blog page with intuitive responsive Design. 
 
 ### Target audience
 The main target group in are:
@@ -172,6 +171,8 @@ There is only one images in this project. The default userprofile picture is a p
 The uplosding funtion is deactivated. The uploading function with cloudinary was not working shorly before the deployment. This function will be added in a later realize.
 
 ### Wireframe
+To get an idea of the look of the individual web pages, wireframes were created in advance for each page.
+
 Wireframe for the homepage:
 ![wireframe homepage](docs/readme_images/wireframe-blog-overview.webp "Wireframe homepage")
 
@@ -217,11 +218,12 @@ Wireframe for the update comment page:
 Wireframe for the delete comment page:
 ![wireframe comment delete](docs/readme_images/wireframe-comment-delete.webp "wireframe comment delete")
 
-
-### Database Schema
-
-
 ### Entity Relationship Diagram
+To illustrate the dependencies of the individual functions of the models, an entity relationship diagram was created. This facilitates the work in the creation process.
+
+![Entity Relationship Diagram](docs/readme_images/.webp "Entity Relationship Diagram")
+
+
 
 
 ### Features
