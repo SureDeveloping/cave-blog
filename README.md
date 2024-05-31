@@ -83,8 +83,8 @@ As operator of the website I want to:
 * provide an a useful and fun app to many users.
 * Provide the possibility to create, read, update and delete blogposts, comments and userprofiles.
 
-### Epics and user stories
-## Initial epics
+## Epics and user stories
+### Initial epics
 * A blog post app with CRUD function. Create a post, update post, detail post and delete a post. 
 * A welcome section on top of the Homepage, followed from all existing blog posts as an overview.
 * Database and admin setup
@@ -94,7 +94,7 @@ As operator of the website I want to:
 * An account app with all user profiles with CRUD functionality
 * A Comment function for the blog posts with CRUD functionality
 
-## Initial user stories
+### Initial user stories
 * As a user, I want like to know what the website is about and made for
 * As a user i want to see all Blog postes
 * As a admin i want to have the overall control of the website
@@ -128,7 +128,7 @@ Finally, I checked the contrast again with [Contrast-grid](contrast-grid.eightsh
 ![Color palette2](docs/readme_images/contrast-grid.png "Color palette2")
 
 ### Typography
-Tho font in the project is PT Sans, a sans-serif googlefonds
+Tho font in the project is PT Sans, a sans-serif googlefonds.
 
 ### Imagery
 There is only one images in this project. The default userprofile picture is a picture from [Freepik](https://freepik.com/).
@@ -179,11 +179,6 @@ Wireframe for the update comment page:
 
 Wireframe for the delete comment page:
 ![wireframe comment delete](docs/readme_images/wireframe-comment-delete.png "wireframe comment delete")
-
-
-
-
-
 
 ### Features
 The website is a Blog about caves. 
