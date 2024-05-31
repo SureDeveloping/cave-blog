@@ -225,11 +225,12 @@ Wireframe for the delete comment page: <br>
 ![wireframe comment delete](docs/readme_images/wireframe-comment-delete.webp "wireframe comment delete")
 
 ## Features
+### Implemented Features
 All pages of the project have a navigation bar, a main line and a footer. 
 The footer always remains the same and does not change. It consists of an address and links to social networks. 
 The navigation bar changes depending on whether and which user is logged in. The content of the main section changes depending on which page is currently being viewed. These are described in more detail below.
 
-### The homepage, overview page
+#### The homepage, overview page
 If no user is logged in the navebar looks like this. On the top left there is the page name "Cave Blog". Next to it following links to the right to the Home, Register, and Login page. <br>
 At the top of the main section there is a welcome text followed by a button that leads to the register page. <br>
 After the welcome section, all blog posts are listed. On a large screen always 3 next to each other. On mobile devices, all posts are displayed one below the other. The title of each block post is a link that leads to the detailed view of the respective post. The block post text is followed by the author of the post. This is also clickable and leads to the user profile of the author. 
@@ -246,15 +247,15 @@ The welcome text is also removed and the blog post overview follows directly. A 
 Homepage with a logged in user: <br>
 ![Homepage with a logged in user](docs/readme_images/features-homepage-user-loggin.png "Homepage with a logged in user")
 
-### Register page
+#### Register page
 The register page is a form with fields for Username, Frist name, Last name, Email and Password and Password confirmation. There are buttons to submit the form and a button to return to the homepage if you do not want to register. There is also a link to the login page, if you already have an account, you can log in there. <br>
 ![Register page](docs/readme_images/features-register-page.png "Register page")
 
-### Login page
+#### Login page
 The login page is a form. It has a field for the user name and a password field. Then there is a button to log in and send the form. Next to it is a button that leads back to the homepage. Below the button is a link that leads to the register page if you do not have an account. <br>
 ![Login page](docs/readme_images/features-login-page.png "Login page")
 
-### Userprofile
+#### Userprofile
 The Create your user profile page is a form. The first field is the city of the user. This is followed by the country and the user bio with a buzzer node text field. This is followed by a field for a website, a Facebook account and an Instagram account. Below this form is a button to submit the form, the "Create" button and a "Home" button that leads back to the homepage. <br>
 
 Create your userprofile page:  <br>
@@ -276,7 +277,7 @@ Delete your Profile page:  <br>
 If a user looks at another user profile. This page is structured in exactly the same way as the user's own profile. On the left is the placeholder for the profile picture. The user name is at the top right. Then first name, last name, city, country and the About Me text. Below this card is a button back to the homepage. 
 ![Delete comments page](docs/readme_images/features-homepage-userprofile-user-not-logged-in.png "Delete comments page")
 
-### Blog posts and comments
+#### Blog posts and comments
 The Create your Post page is a form consisting of a field for the title of the post. This is followed by a text content field with a summernode text editor for designing the text. The form fields are followed by two buttons. One to save the field and the other to return to the homepage. <br>
 
 Create your post page:  <br>
@@ -301,30 +302,76 @@ Delete comments page:
 The delete comment page also consists of a warning question below which there are two buttons. One button to delete the comment, the other to go back to the homepage.
 ![Delete comments page](docs/readme_images/features-homepage-comment-delete.png "Delete comments page")
 
-
-### Accessibility
-To ensure Accessibility the following things were done:
-- I used semantic HTML.
-- I used descriptive alt attributes for images.
-- I provided information for screen readers.
-- I used good color contrast and a tested color palette.
+### Future Features
+There are some features that are still possible and can be implemented in the future. These are already listed in the Aglie list and rated as “Will not have”.
+* A custom made 404 error page.
+* Password Change function.
+* New Password, Forgotten Password function.
+* Upload picture function in blog post.
+* Upload picture function in user profile.
+* Like function for blog posts.
+* Categories function to sort blog posts into groups.
 
 ## Technologies used
-### Languages used
-HTML, CSS and Java Script were used for this project.
+### Languages and frameworks used
+HTML, CSS , Python and Java Script languages were used for this project.
+Additional the bootstrap and django frameworks were also used.
+
 ### Software used
 Balsamiq - To create a wireframe. <br>
 Gitpod - To code the website. <br>
 Git - For version control. <br>
-Github - To store and deploy the website. <br>
+Github - To store the website. <br>
+Gitpod - As an integrated development environment to write the code. <br>
+Heroku - To deploy the website. <br>
 Google Fonts - All fonts used are from google fonts. <br>
-gauger.io/fonticon - To create a favicon. <br>
 Google Dev Tools, and Lighthouse - For troubleshooting testing and fixing bugs. <br>
 Deepl - For translating text. <br>
 Birme - To change the image to webp format and reducing the size of the images. <br>
+Tabletomarkdown.com - Used to Create table for markdown out of excel cheats. <br>
+ChatGPT - To create the content for blog posts and user profiles. <br>
 Am I Responsive? - To check if the page is responsive. <br>
+
 ## Deployment
-The project was coded with gipod and then deployed on heroku. That is how the deployment was done:
+The project was coded with gipod and then deployed on heroku.
+
+### Preparation of the deployment on Herokuko
+* The equirements.txt must be up to date.
+* A procfile needs to be created for the configuration of the Heroku deployment as a Gunicorn web application.
+* ALLOWED_HOSTS in settings.py must be set to ['app_name.heroku.com', 'localhost'] and static files must be configured.
+* The environment variables in env.py, which are ignored in the repository, must be configured.
+
+### Deploying on heroku
+* Log in to your Heroku account.
+* Click on the NEW button and then on "create new app".
+* Choose a unique name for the app.
+* Choose a region, Europe or United States.
+* Click on "create app."
+* Choose the deployment method (For this project GitHub was used).
+* Search for the repository name on GitHub ("cave-blog").
+* Connect the repository by clicking on Connect
+* Click on the settings tab and then on reveal config vars.
+* Input the required hidden variables
+* Choose Node.js and Python as the designated buildpacks.
+* Click on the Deployment tab
+* Choose the main branch
+* Deploy this project automated or manual (the project was deployed manually)
+* Once a deployment has been successfully completed, a success message is displayed and a view button can be used to view the project in the browser
+
+### Fork this repository
+* Visit the GitHub repository.
+* Click on the Fork button, located in the upper right-hand corner, next to the star button.
+
+### Clone this repository
+* Visit the GitHub repository.
+* Click the Code button, located in the top right, next to the about page.
+* Choose between 'HTTPS', 'SSH', or 'GitHub CLI' based on your preferred method for cloning.
+* Copy the URL.
+* Open Git Bash.
+* Choose the location where the cloned directory will be saved.
+* Type git clone and paste the URL ($ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY)
+* Press enter to create the local clone.
+
 
 ## Testing
 The page was tested on different ways and different errors came to light. All tests are listes on a seperate page. Please follow the link.
@@ -359,11 +406,12 @@ The content of this project was written by Stephan Sure und the held of the ai t
 - https://www.w3schools.com/css/
 - geekforgeeks
 - W3Schools
+
 ### Acknowledgments
 I like to thank the follow persons for the help during the project:
 - My Code Institute mentor Spencer Barriball.
 - The Tutor Support team at Code Institute.
-- Slack pear groupe especially James Evans.
+- Slack pear groupe.
 - All the people who make their knowledge available for free on YouTube.
 
 **This project is for educational use only and was created for the Code Institute course Full stack software development by Stephan Sure.**
