@@ -220,10 +220,9 @@ Wireframe for the delete comment page:
 
 ### Entity Relationship Diagram
 To illustrate the dependencies of the individual functions of the models, an entity relationship diagram was created. This facilitates the work in the creation process.
+The uploading of images will only be published in the next realize.
 
-![Entity Relationship Diagram](docs/readme_images/.webp "Entity Relationship Diagram")
-
-
+![Entity Relationship Diagram](docs/readme_images/erd.png "Entity Relationship Diagram")
 
 
 ### Features
