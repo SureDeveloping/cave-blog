@@ -14,12 +14,12 @@ Portfolio Project 4 – User SureDeveloping – Code Institute
     [Initial epics)](#initial-epics-for-an-mvp)\
     [Initial userstories )](#initial-userstories-for-an-mvp)\
 [Agile approach](#agile-approach) \
+[Entity relationship diagram](#entity-relationship-diagram) \
 [Design](#design) \
     [Color](#color) \
     [Typography](#typography) \
     [Imagery](#imagery) \
 [Wireframe](#wireframe) \
-[Entity relationship diagram](#entity-relationship-diagram) \
 [Features](#features) \
     [Implemented features](#implemented-features) \
     [Future features](#futur-features) \
@@ -153,6 +153,12 @@ This application was developed by using an Agile apporoch. At the beginning, a l
 
 All user stories, except for 'Will not have (wish to have)', were transferred to a GitHub Projects [kanban bord](https://github.com/users/SureDeveloping/projects/4/views/1/). Here, the development process was then monitored during the creation of the individual increments. The features were prioritized based on their importance to functionality and interdependencies.
 
+### Entity Relationship Diagram
+To illustrate the dependencies of the individual functions of the models, an entity relationship diagram was created. This facilitates the work in the creation process.
+The uploading of images will only be published in the next realize.
+
+![Entity Relationship Diagram](docs/readme_images/erd.png "Entity Relationship Diagram")
+
 ## Design
 ### Color scheme
 I used the website [Coolors](https://coolors.com/) to find colors that go together. 
@@ -218,15 +224,52 @@ Wireframe for the update comment page:
 Wireframe for the delete comment page:
 ![wireframe comment delete](docs/readme_images/wireframe-comment-delete.webp "wireframe comment delete")
 
-### Entity Relationship Diagram
-To illustrate the dependencies of the individual functions of the models, an entity relationship diagram was created. This facilitates the work in the creation process.
-The uploading of images will only be published in the next realize.
-
-![Entity Relationship Diagram](docs/readme_images/erd.png "Entity Relationship Diagram")
-
-
 ### Features
-The website is a Blog about caves. 
+The homepage
+![wireframe homepage](docs/readme_images/wireframe-blog-overview.webp "Wireframe homepage")
+
+Wireframe for the register page:
+![wireframe register page](docs/readme_images/wireframe-register.webp "Wireframe register page")
+
+Wireframe for the login page:
+![wireframe login page](docs/readme_images/wireframe-login.webp "Wireframe login page")
+
+Wireframe for the create blog post page:
+![wireframe blog post create page](docs/readme_images/wireframe-blog-create.webp "wireframe blog post create page")
+
+Wireframe for the update blog post page:
+![wireframe blog post update page](docs/readme_images/wireframe-blog-update.webp "wireframe blog post update page")
+
+Wireframe for the delete blog post page:
+![wireframe blog post delete page](docs/readme_images/wireframe-blog-delete.webp "wireframe blog post delete page")
+
+Wireframe for the detail blog post page:
+![wireframe blog post delete page](docs/readme_images/wireframe-blog-detail.webp "wireframe blog post delete page")
+
+Wireframe for the create userprofile page:
+![wireframe userprofile create page](docs/readme_images/wireframe-userprofile-create.webp "wireframe userprofile create page")
+
+Wireframe for the update userprofile page:
+![wireframe userprofile update page](docs/readme_images/wireframe-userprofile-update.webp "wireframe userprofile update page")
+
+Wireframe for the userprofile page:
+![wireframe userprofile](docs/readme_images/wireframe-userprofil.webp "wireframe userprofile")
+
+Wireframe for the delete userprofile page:
+![wireframe delete userprofile page](docs/readme_images/wireframe-userprofile-delete.webp "wireframe delete userprofile page")
+
+Wireframe for the comment overview on the blog detail page:
+![wireframe comment overview](docs/readme_images/wireframe-blog-detail-comment.webp "wireframe comment overview")
+
+Wireframe for the create comment page:
+![wireframe comment create](docs/readme_images/wireframe-comment-create.webp "wireframe comment create")
+
+Wireframe for the update comment page:
+![wireframe comment update](docs/readme_images/wireframe-comment-update.webp "wireframe comment update")
+
+Wireframe for the delete comment page:
+![wireframe comment delete](docs/readme_images/wireframe-comment-delete.webp "wireframe comment delete")
+
 
 ### Accessibility
 To ensure Accessibility the following things were done:
