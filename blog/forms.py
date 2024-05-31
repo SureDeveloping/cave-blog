@@ -19,7 +19,7 @@ class PostForm(forms.ModelForm):
             ['color', ['color']],
             ['para', ['ul', 'ol', 'paragraph']],
             ['table', ['table']],
-            ['insert', ['picture']], 
+            ['insert', []], 
             ['view', ['fullscreen', 'codeview', 'help']],
         ],
     }}))

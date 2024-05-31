@@ -24,7 +24,7 @@ class RegisterForm(UserCreationForm):
 class UserProfileForm(forms.ModelForm):
     class Meta:
         model = Profile
-        fields = ('city', 'country', 'userbio', 'website_url', 'facebook_url', 'instagram_url', 'profile_picture')
+        fields = ('city', 'country', 'userbio', 'website_url', 'facebook_url', 'instagram_url')
         widgets = {
             'city': forms.TextInput(attrs={'class': 'form-control'}), 
             'country': forms.TextInput(attrs={'class': 'form-control'}),
@@ -32,7 +32,7 @@ class UserProfileForm(forms.ModelForm):
             'website_url': forms.TextInput(attrs={'class': 'form-control'}),  
             'facebook_url': forms.TextInput(attrs={'class': 'form-control'}),  
             'instagram_url': forms.TextInput(attrs={'class': 'form-control'}),  
-            'profile_picture': forms.FileInput(attrs={'class': 'form-control'}),  
+             
         }
 
     userbio = forms.CharField(widget=SummernoteWidget(attrs={'summernote': {
@@ -58,11 +58,11 @@ class UserProfileUpdateForm(forms.ModelForm):
     website_url = forms.URLField(required=False, widget=forms.TextInput(attrs={'class': 'form-control'}))
     facebook_url = forms.URLField(required=False, widget=forms.TextInput(attrs={'class': 'form-control'}))
     instagram_url = forms.URLField(required=False, widget=forms.TextInput(attrs={'class': 'form-control'}))
-    profile_picture = forms.ImageField(required=False, widget=forms.FileInput(attrs={'class': 'form-control'}))
+    
 
     class Meta:
         model = Profile
-        fields = ['first_name', 'last_name', 'email', 'city', 'country', 'userbio', 'website_url', 'facebook_url', 'instagram_url', 'profile_picture']
+        fields = ['first_name', 'last_name', 'email', 'city', 'country', 'userbio', 'website_url', 'facebook_url', 'instagram_url']
     
 
     def __init__(self, *args, **kwargs):
