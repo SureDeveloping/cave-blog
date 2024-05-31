@@ -136,49 +136,49 @@ The uplosding funtion is deactivated. The uploading function with cloudinary was
 
 ### Wireframe
 Wireframe for the homepage:
-![wireframe homepage](docs/readme_images/wireframe-blog-overview.png "Wireframe homepage")
+![wireframe homepage](docs/readme_images/wireframe-blog-overview.webp "Wireframe homepage")
 
 Wireframe for the register page:
-![wireframe register page](docs/readme_images/wireframe-register.png "Wireframe register page")
+![wireframe register page](docs/readme_images/wireframe-register.webp "Wireframe register page")
 
 Wireframe for the login page:
-![wireframe login page](docs/readme_images/wireframe-login.png "Wireframe login page")
+![wireframe login page](docs/readme_images/wireframe-login.webp "Wireframe login page")
 
 Wireframe for the create blog post page:
-![wireframe blog post create page](docs/readme_images/wireframe-blog-create.png "wireframe blog post create page")
+![wireframe blog post create page](docs/readme_images/wireframe-blog-create.webp "wireframe blog post create page")
 
 Wireframe for the update blog post page:
-![wireframe blog post update page](docs/readme_images/wireframe-blog-update.png "wireframe blog post update page")
+![wireframe blog post update page](docs/readme_images/wireframe-blog-update.webp "wireframe blog post update page")
 
 Wireframe for the delete blog post page:
-![wireframe blog post delete page](docs/readme_images/wireframe-blog-delete.png "wireframe blog post delete page")
+![wireframe blog post delete page](docs/readme_images/wireframe-blog-delete.webp "wireframe blog post delete page")
 
 Wireframe for the detail blog post page:
-![wireframe blog post delete page](docs/readme_images/wireframe-blog-detail.png "wireframe blog post delete page")
+![wireframe blog post delete page](docs/readme_images/wireframe-blog-detail.webp "wireframe blog post delete page")
 
 Wireframe for the create userprofile page:
-![wireframe userprofile create page](docs/readme_images/wireframe-userprofile-create.png "wireframe userprofile create page")
+![wireframe userprofile create page](docs/readme_images/wireframe-userprofile-create.webp "wireframe userprofile create page")
 
 Wireframe for the update userprofile page:
-![wireframe userprofile update page](docs/readme_images/wireframe-userprofile-update.png "wireframe userprofile update page")
+![wireframe userprofile update page](docs/readme_images/wireframe-userprofile-update.webp "wireframe userprofile update page")
 
 Wireframe for the userprofile page:
-![wireframe userprofile](docs/readme_images/wireframe-userprofil.png "wireframe userprofile")
+![wireframe userprofile](docs/readme_images/wireframe-userprofil.webp "wireframe userprofile")
 
 Wireframe for the delete userprofile page:
-![wireframe delete userprofile page](docs/readme_images/wireframe-userprofile-delete.png "wireframe delete userprofile page")
+![wireframe delete userprofile page](docs/readme_images/wireframe-userprofile-delete.webp "wireframe delete userprofile page")
 
 Wireframe for the comment overview on the blog detail page:
-![wireframe comment overview](docs/readme_images/wireframe-blog-detail-comment.png "wireframe comment overview")
+![wireframe comment overview](docs/readme_images/wireframe-blog-detail-comment.webp "wireframe comment overview")
 
 Wireframe for the create comment page:
-![wireframe comment create](docs/readme_images/wireframe-comment-create.png "wireframe comment create")
+![wireframe comment create](docs/readme_images/wireframe-comment-create.webp "wireframe comment create")
 
 Wireframe for the update comment page:
-![wireframe comment update](docs/readme_images/wireframe-comment-update.png "wireframe comment update")
+![wireframe comment update](docs/readme_images/wireframe-comment-update.webp "wireframe comment update")
 
 Wireframe for the delete comment page:
-![wireframe comment delete](docs/readme_images/wireframe-comment-delete.png "wireframe comment delete")
+![wireframe comment delete](docs/readme_images/wireframe-comment-delete.webp "wireframe comment delete")
 
 ### Features
 The website is a Blog about caves. 
