@@ -24,6 +24,11 @@ body header .navbar-toggler {
     color: white;
 }
 
+.active > .nav-link {
+    text-decoration: underline;
+    text-decoration-color: white;
+    font-weight: bold;
+}
 
 /* main */
 .card-body img {
