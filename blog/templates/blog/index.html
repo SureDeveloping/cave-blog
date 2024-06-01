@@ -28,7 +28,7 @@
         <p>
             So, what are you waiting for? Create an account and share your first blog post 
             with the community. We look forward to hearing about your experiences and discovering 
-            the beauty of the underground world together!</p>
+            the beauty of the underground world together!
         </p>
         <a href="{% url 'register' %}" class="btn btn-primary">Register here</a>
 
@@ -46,10 +46,10 @@
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title"><a href="{% url 'blog-post-detail' post.pk %}">{{ post.title }}</a></h5>
-                    <p class="card-text">{{ post.textcontent|slice:":150"|safe }}{% if post.textcontent|length > 200 %}...{% endif %}</p>
+                    <div class="card-text">{{ post.textcontent|slice:":150"|safe }}{% if post.textcontent|length > 200 %}...{% endif %}</div>
                     
                     <p class="card-text author-link"><small class="text-muted">by 
-                        {% if post.author.profile %}
+                        {% if post.author.profile %}S
                             <a href="{% url 'user-profil-detail' post.author.profile.id %}">{{ post.author.get_full_name }}</a>
                         {% else %}
                             {{ post.author.get_full_name }}
