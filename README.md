@@ -5,42 +5,37 @@ Portfolio Project 4 – User SureDeveloping – Code Institute
 [Link to the deployed Project](https://cave-blog-5fd1224bbbc5.herokuapp.com/)
 
 ## Contents
-[Contents](#contents) \
-[User experience (UX)](#user-experience)\
-    [Project goals](#target-audience)\
-    [Target audience](#target-audience)\
-    [User requirements and expectations](#user-requirements-and-expectations)\
-[Epics and user stories](#user-story)\
-    [Initial epics)](#initial-epics-for-an-mvp)\
-    [Initial userstories )](#initial-userstories-for-an-mvp)\
-[Agile approach](#agile-approach) \
-[Entity relationship diagram](#entity-relationship-diagram) \
-[Design](#design) \
-    [Color](#color) \
-    [Typography](#typography) \
-    [Imagery](#imagery) \
-[Wireframe](#wireframe) \
-[Features](#features) \
-    [Implemented features](#implemented-features) \
-    [Future features](#futur-features) \
-[Technologies used](#technologies-used) \
-    [Languages and framework](#languages-and-framework) \
-    [Database](#database) \
-    [Technologies and tools](#technologies-and-tools) \
-[Deployment](#deployment) \
-    [Pre deployment](#pre-deployment) \
-    [Deploying with heroku](#deploying-with-heroku) \
-    [Fork the repository](#fork-the-repository) \
-    [Clone the repository](#clone-the-repository) \
-[Testing](#testing) \
-    [Manual testing](#manual-testing) \
-    [Tool testing](#tool-testing) \
-    [Fixed bugs](#tool-testing) \
-    [Known unfixed bugs](#known-unfixed-bugs) \
-[Credits](#credits) \
-    [Code materials used](#code-materials-used) \
-    [Content on the website](#content-on-the-website) \
-[Acknowledgments](#acknowledgments)
+- [User experience (UX)](#user-experience-ux)
+    - [Project goals](#target-audience)
+    - [Target audience](#target-audience)
+    - [User requirements and expectations](#user-requirements-and-expectations)
+- [Epics and user stories](#user-story)
+    - [Initial epics)](#initial-epics-for-an-mvp)
+    - [Initial userstories )](#initial-userstories-for-an-mvp)
+- [Agile approach](#agile-approach)
+- [Entity relationship diagram](#entity-relationship-diagram) 
+- [Design](#design) 
+    - [Color](#color) 
+    - [Typography](#typography) 
+    - [Imagery](#imagery) 
+- [Wireframe](#wireframe) 
+- [Features](#features) 
+    - [Implemented features](#implemented-features) 
+    - [Future features](#futur-features) 
+- [Technologies used](#technologies-used) 
+    - [Languages and framework](#languages-and-framework) 
+    - [Database](#database) 
+    - [Technologies and tools](#technologies-and-tools) 
+- [Deployment](#deployment) 
+    - [Pre deployment](#pre-deployment) 
+    - [Deploying with heroku](#deploying-with-heroku) 
+    - [Fork the repository](#fork-the-repository) 
+    - [Clone the repository](#clone-the-repository) 
+- [Testing](#testing) 
+- [Credits](#credits) 
+    - [Content on the website](#content-on-the-website) 
+    - [Code materials used](#code-materials-used) 
+- [Acknowledgments](#acknowledgments)
 
 ## User experience (UX)
 ### Project goal
@@ -314,11 +309,16 @@ There are some features that are still possible and can be implemented in the fu
 
 ## Technologies used
 ### Languages and frameworks used
-HTML, CSS , Python and Java Script languages were used for this project.
-Additional the bootstrap and django frameworks were also used.
+HTML, CSS , Python and Java Script languages were used in combination with the frameworks bootstrap and django.
+Django was also customised with:
+* Gunicorn - as WSGI (Web Server Gateway Interface) for running Python web applications.
+* Summernote - WYSIWYG editor.
+* Whitenoise - for storing static files.
+* Cloudinary - as cloud to store no styic fieles (in the next release)
 
 ### Software used
 Balsamiq - To create a wireframe. <br>
+Draw-io - To create an ERD. <br>
 Gitpod - To code the website. <br>
 Git - For version control. <br>
 Github - To store the website. <br>
@@ -330,13 +330,25 @@ Deepl - For translating text. <br>
 Birme - To change the image to webp format and reducing the size of the images. <br>
 Tabletomarkdown.com - Used to Create table for markdown out of excel cheats. <br>
 ChatGPT - To create the content for blog posts and user profiles. <br>
+Microsoft Excel - To pre create tables for the readme. <br>
+PostGresSQl - to store the database information. <br>
+CI Python Pep8 - to validate the Python code. <br>
+W3C HTML Validator - to validate the HTML code. <br>
+W3C CSS Validator -  to validate the CSS code. <br>
+
+???
+Jigsaw:
+??????
+WebAim Contrast Checker - to check if the contrast guidelines where adhered to. <br>
+Wave Accessibility Tool - to test the accessibility. <br>
+??????
 Am I Responsive? - To check if the page is responsive. <br>
 
 ## Deployment
 The project was coded with gipod and then deployed on heroku.
 
 ### Preparation of the deployment on Herokuko
-* The equirements.txt must be up to date.
+* The requirements.txt must be up to date - command pip3 freeze > requirements.txt.
 * A procfile needs to be created for the configuration of the Heroku deployment as a Gunicorn web application.
 * ALLOWED_HOSTS in settings.py must be set to ['app_name.heroku.com', 'localhost'] and static files must be configured.
 * The environment variables in env.py, which are ignored in the repository, must be configured.
@@ -363,7 +375,7 @@ The project was coded with gipod and then deployed on heroku.
 * Click on the Fork button, located in the upper right-hand corner, next to the star button.
 
 ### Clone this repository
-* Visit the GitHub repository.
+* Visit the GitHub repository.  [repository](https://https://github.com/SureDeveloping/cave-blog)
 * Click the Code button, located in the top right, next to the about page.
 * Choose between 'HTTPS', 'SSH', or 'GitHub CLI' based on your preferred method for cloning.
 * Copy the URL.
@@ -372,46 +384,44 @@ The project was coded with gipod and then deployed on heroku.
 * Type git clone and paste the URL ($ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY)
 * Press enter to create the local clone.
 
+### Run this project locally
+* Visit the GitHub repository.  [repository](https://https://github.com/SureDeveloping/cave-blog)
+* Click the Code button, located in the top right, next to the about page.
+* Click on download Zip.
+* After downloding open the zip file and run it an editor.
+* Create an env.py file for the environment variables.
+* Install PostgreSQL on your machine and open the ports.
+* Create a virtual environment and install the python modules in the pip file.
+* Run python3 makemigrations, migrate and runserver
 
 ## Testing
-The page was tested on different ways and different errors came to light. All tests are listes on a seperate page. Please follow the link.
- [Link to the testing page](https://cave-blog-5fd1224bbbc5.herokuapp.com/)
+The page was tested on different ways and different errors came to light. All tests are listes on a seperate page. Please follow the
+[link.](./TESTING.md)
 
-
-### Solved bugs
-- 
-### Known unsolved bugs
-- There are ...
 ## Credits
-### Code used
-- I used th
+### Content
+The content of the website was created by Stephan Sure with the assistance of chat gpt. The content is all fictitious.
 
-### Content on the website
-The content of this project was written by Stephan Sure und the held of the ai toll of chatgpt.
-### Learning materials
-- All content from nnline course in "Full Stack Software Developmen" especially videos about Portfolio Project 2 and ReadME from Code Instituet
-- https://www.youtube.com/watch?v=40vLxYUJiQY&list=PL_7334VduOHvzZYlgy_0kZLcic2NINCUt&index=6 - Video about the Profolio Project 2
-- https://www.youtube.com/watch?v=U9VF-4euyRo&t=831s - Video about css and clamp function
-- https://www.youtube.com/watch?v=eHPLTDOAggc - To lern how to make the buttons work
-- https://www.youtube.com/watch?v=riDzcEQbX6k - How to bulid a quizz with java script
-- https://www.youtube.com/playlist?list=PLB6wlEeCDJ5Yyh6P2N6Q_9JijB6v4UejF  - How to bulid a quizz with java script
-- https://www.youtube.com/watch?v=PBcqGxrr9g8 - How to bulid a quizz with java script
-- https://developer.mozilla.org/en-US/docs/Web/API/setTimeout - Timeout function
-- https://www.w3schools.com/jsref/event_onclick.asp  - To lern how to make the buttons work
-- https://www.youtube.com/watch?v=xVMkFJZhZYU&t=283s - To lern how to make the buttons work
-- https://werner-zenk.de/javascript/html-button_ueber_javascript_eine_funktion_zuweisen.php - To lern how to make the buttons work
-- https://www.youtube.com/watch?v=P6UgYq3J3Qs - To learn more about position absolut and relative
-- https://www.youtube.com/shorts/9cSL5dP4rgM - To learn more about position absolut and relative
-- https://stackoverflow.com/
-- https://www.w3schools.com/css/
-- geekforgeeks
-- W3Schools
+### Media
+The the default image for the userprofile and the icons are from the website [Freepik](https://freepik.com/).
+
+### Code
+* CI codestar blog walkthrough - especially for setting up the project
+* [CI Django Blog Webinarm](https://www.youtube.com/watch?v=YH--VobIA8c/) - tutorial related to the CI codestar blog walkthrough
+* [Stack Overflow](https://stackoverflow.com/) -  in general for all questions about code.
+* [Django Docs](https://www.djangoproject.com/) -  all questions about django.
+* [Bootstrap Docs](https://getbootstrap.com/docs/5.3/getting-started/introduction/) - all questions about bootstrap.
+* [CODEMY.com](https://www.youtube.com/playlist?list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi/) - tutorial on how to create a blog website.
+* [simpleisbetterthancomplex](https://simpleisbetterthancomplex.com/tutorial/2016/07/22/how-to-extend-django-user-model.html) - tutorial on how to extend django user model.
+* [youtube Ssali Jonathan](https://www.youtube.com/watch?v=qwATSBwJj9A/) - tutorial on Django's In Built Authentication.
+* [youtube Dee Mc](https://www.youtube.com/watch?v=sBjbty691eI&list=PLXuTq6OsqZjbCSfiLNb2f1FOs8viArjWy/) - tutorial on how to create a youtube blog.
+* [youtube Dr. Daniel Soper](https://www.youtube.com/watch?v=lAtCySGDD48) - tutorial on how to create an ERD with draw.io
 
 ### Acknowledgments
 I like to thank the follow persons for the help during the project:
 - My Code Institute mentor Spencer Barriball.
 - The Tutor Support team at Code Institute.
-- Slack pear groupe.
+- Slack pear groupe and and CI cohort.
 - All the people who make their knowledge available for free on YouTube.
 
 **This project is for educational use only and was created for the Code Institute course Full stack software development by Stephan Sure.**
