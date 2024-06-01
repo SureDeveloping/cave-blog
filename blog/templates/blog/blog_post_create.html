@@ -7,7 +7,7 @@
     <div class="form-group"> 
         <form method="POST">
             {% csrf_token %}
-            {{ form.as_p }}
+            {{ form.as_div }}
             {{ foobar|safe }}
             <button type="submit" class="btn btn-primary">Post</button>
             <a href="{% url 'home' %}" class="btn btn-primary">Home</a >
