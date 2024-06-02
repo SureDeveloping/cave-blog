@@ -23,3 +23,12 @@ Link back to [README.md](/README.md)
 - [Browser compatibility](#browser-compatibility)
    * [Intended appearance on different browsers](#intended-appearance-on-different-browsers)
    * [Intended responsiveness on different browsers](#intended-responsiveness-on-different-browsers)
+
+
+
+
+CSS Validator:
+
+
+Warning 1: Imported style sheets are not checked in direct input and file upload modes. This warning can be ignored in this instance.
+- [Stack overflow](https://stackoverflow.com/questions/25946111/importing-css-is-ending-up-with-an-error) - the google style sheet is not checked in the validator

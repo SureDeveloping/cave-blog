@@ -309,7 +309,7 @@ There are some features that are still possible and can be implemented in the fu
 
 ## Technologies used
 ### Languages and frameworks used
-HTML, CSS , Python and Java Script languages were used in combination with the frameworks bootstrap and django.
+HTML, CSS and Python languages were used in combination with the frameworks bootstrap and django.
 Django was also customised with:
 * Gunicorn - as WSGI (Web Server Gateway Interface) for running Python web applications.
 * Summernote - WYSIWYG editor.

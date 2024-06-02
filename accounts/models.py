@@ -3,9 +3,10 @@ from django.contrib.auth.models import User
 from django.urls import reverse
 from cloudinary.models import CloudinaryField
 
+
 # Create your models here.
 class Profile(models.Model):
-    user = models.OneToOneField(User, null=True, on_delete = models.CASCADE)
+    user = models.OneToOneField(User, null=True, on_delete=models.CASCADE)
     city = models.CharField(max_length=100, blank=True, null=True)
     country = models.CharField(max_length=100, blank=True, null=True)
     userbio = models.TextField()
