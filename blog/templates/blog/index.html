@@ -50,8 +50,8 @@
                     <div class="card-text">{{ post.textcontent|slice:":150"|safe }}{% if post.textcontent|length > 200 %}...{% endif %}</div>
                     
                     <p class="card-text author-link"><small class="text-muted">by 
-                        {% if post.author.profile %}S
-                            <a href="{% url 'user-profil-detail' post.author.profile.id %}">{{ post.author.get_full_name }}</a>
+                        {% if post.author.profile and user.is_authenticated %}
+                                        <a href="{% url 'user-profil-detail' post.author.profile.id %}">{{ post.author.get_full_name }}</a>
                         {% else %}
                             {{ post.author.get_full_name }}
                         {% endif %}
