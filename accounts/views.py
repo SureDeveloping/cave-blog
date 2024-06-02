@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from django.views import generic
 from django.contrib.auth.forms import UserCreationForm
 from django.urls import reverse_lazy, reverse
@@ -9,6 +9,7 @@ from django.views.generic import CreateView, DetailView, DeleteView
 from django.views.generic.edit import UpdateView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import HttpResponseRedirect
+from django.contrib.auth import views as auth_views
 
 
 # Create your views here.
@@ -85,3 +86,8 @@ class UserProfileDeleteView(LoginRequiredMixin, DeleteView):
         success_url = self.get_success_url()
         self.object.delete()
         return HttpResponseRedirect(success_url)
+
+class CustomLoginView(auth_views.LoginView):
+    def form_invalid(self, form):
+        messages.error(self.request, 'Invalid username or password.')
+        return super().form_invalid(form)
