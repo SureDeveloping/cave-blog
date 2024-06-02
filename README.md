@@ -145,7 +145,6 @@ This application was developed by using an Agile apporoch. At the beginning, a l
 | Categorys                    | As a user, I want to sort my post in different categorys                                                | AC1: In the create, update post menue i can add a category to the post                                                                                              | T1: Add the category to the blog form.                                                                                                                                                   | Will not have (wish to have) |
 
 
-
 All user stories, except for 'Will not have (wish to have)', were transferred to a GitHub Projects [kanban bord](https://github.com/users/SureDeveloping/projects/4/views/1/). Here, the development process was then monitored during the creation of the individual increments. The features were prioritized based on their importance to functionality and interdependencies.
 
 ### Entity Relationship Diagram
