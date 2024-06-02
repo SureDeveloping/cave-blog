@@ -18,10 +18,19 @@ class UserCreationView(generic.CreateView):
     template_name = 'registration/register.html'
     success_url = reverse_lazy('login')
     success_message = "User Created Successfully"
+    failure_message = ("User was not created. Your chosen username may already" 
+                       " exist or you may not have followed the username and" 
+                       " password requirements.")
+
 
     def form_valid(self, form):
         response = super().form_valid(form)
         messages.success(self.request, self.success_message)
+        return response
+        
+    def form_invalid(self, form):
+        response = super().form_invalid(form)
+        messages.error(self.request, self.failure_message)
         return response
 
 
