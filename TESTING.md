@@ -13,17 +13,11 @@ Link back to [README.md](/README.md)
     - [Browser compatibility](#browser-compatibility)  
     - [User story testing](#user-story-testing)
     - [Responsiveness test](#responsiveness-test)
-    
-  - [Bugs](#bugs)
+- [Bugs](#bugs)
     - [Solved bugs](#solved-bugs)
     - [Known bugs](#known-bugs)
     - [Unknown bugs](#unknown-bugs)
 
-- [Browser compatibility](#browser-compatibility)
-   * [Intended appearance on different browsers](#intended-appearance-on-different-browsers)
-   * [Intended responsiveness on different browsers](#intended-responsiveness-on-different-browsers)
-
-   - [Django Messages Implementation Testing](#django-messages-implementation-testing)  ???
 
 
 ## Code validation
@@ -103,4 +97,33 @@ The values for accessibility and best practices are all in the very good range.
 | comment_delete.html      | 88          | 100           | 96             | 83  | <details><summary>comment_delete.html</summary><img src="./docs/readme_images/lighthouse/comment-delete-html.png"></details>           | pass   |
 
 
-### Lighthouse test
+### Wave accessibility evaluation
+WAVE® is a test to ensure that web content is more accessible to individuals with disabilities.
+The website passes the test, no errors appear. [Link to Wave](https://wave.webaim.org/) <br>
+
+Here is the test result:
+[Wave - test result](docs/readme_images/wave/wave-test.png)
+
+
+## Manual testing
+### User input Validation
+
+#### Forms
+The formulas on the website have been tested to ensure that they work properly. Function of forwarding and notifications.
+
+| Feature               | Action               | Expected Outcome                                                                                                                                                 | Screenshots                                                                                                               | result |
+| --------------------- | -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------ |
+| Registration Form     | Submit form          |   User receives confirmation message and is redirected to the login page.Warnings are issued accordingly for unauthorized entries.                               | <details><summary>Registration Form</summary><img src="./docs/readme_images/form-test/register1.png"></details>           | pass   |
+|                       |                      |                                                                                                                                                                  | <details><summary>Registration Form</summary><img src="./docs/readme_images/form-test/register2.png"></details>           |        |
+|                       |                      |                                                                                                                                                                  | <details><summary>Registration Form</summary><img src="./docs/readme_images/form-test/register3.png"></details>           |        |
+| Login Form            | Login with user data | User can log in and is redirected to the homepage. Warnings are issued accordingly for unauthorized entries.                                                     | <details><summary>Registration Form</summary><img src="./docs/readme_images/form-test/login1.png"></details>              | pass   |
+|                       |                      |                                                                                                                                                                  | <details><summary>Registration Form</summary><img src="./docs/readme_images/form-test/login2.png"></details>              |        |
+| Create Blog Post Form | Create post          | User can create a Blog Post and re redirected to the deatil view of the post. Warnings are issued accordingly for empty field                                    | <details><summary>Registration Form</summary><img src="./docs/readme_images/form-test/create-blog-post1.png"></details>   | pass   |
+| Update Blog Post Form | Update post          | User can update a Blog Post and is redirected to the deatil view of the post. Warnings are issued accordingly for empty field                                    | <details><summary>Registration Form</summary><img src="./docs/readme_images/form-test/update-blog-post1.png"></details>   | pass   |
+| Create Comment Form   | Create comment       | User can create a comment and is redirected to the deatil view of the post. Warnings are issued accordingly for empty field                                      | <details><summary>Registration Form</summary><img src="./docs/readme_images/form-test/update-blog-post1.png"></details>   | pass   |
+| Update Comment Form   | Update comment       | User can update a comment and is redirected to the deatil view of the post. Warnings are issued accordingly for empty field                                      | <details><summary>Registration Form</summary><img src="./docs/readme_images/form-test/update-comment1.png"></details>     | pass   |
+| Create Userprofile    | Create userprofile   | User can create a userprofile and is redirected to the deatil view of the profile. Warnings are issued if the about me field is empty. The rest are not required | <details><summary>Registration Form</summary><img src="./docs/readme_images/form-test/create-userprofile1.png"></details> | pass   |
+| Update Userprofile    | Update userprofile   | User can update a userprofile and is redirected to the deatil view of the profile. Warnings are issued if the about me field is empty. The rest are not required | <details><summary>Registration Form</summary><img src="./docs/readme_images/form-test/update-userprofile1.png"></details> | pass   |
+
+#### Buttons and links
+
