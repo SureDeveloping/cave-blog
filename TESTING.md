@@ -77,8 +77,30 @@ All python files created were tested with the CI Python Linter. The errors detec
 | caveblog - settings.py   | <details><summary>caveblog - settings.py</summary><img src="./docs/readme_images/python-linter/settings2.png"></details>          | 0      | pass   |
 | caveblog - urls.py       | <details><summary>caveblog - urls.py</summary><img src="./docs/readme_images/python-linter/urls.png"></details>                   | 0      | pass   |
 
-## Lighthouse Scores
 
-## Lighthouse
+### Lighthouse test
+Performance, accessibility, best practices and seo were tested using [lighthouse](https://developer.chrome.com/docs/lighthouse/overview/) <br>
+Overall, good values were achieved in the lighthouse test. However, it can be seen that the performance of the pages where Summernode was used is significantly worse than the pages without Summernode. On the pages with Summernode the value is between 68 and 71, on the other pages the worst value is 88. For this reason it is worth testing a different text editor in the future. <br>
+With a blog, I don't have much influence on the content and therefore on the SEO value. The worst value is 83, which is still good, but it is difficult to improve it if you have little influence on the content. 
+The values for accessibility and best practices are all in the very good range. 
 
-Performance, accessibility, best practices and seo were tested using [lighthouse](https://developer.chrome.com/docs/lighthouse/overview/) in Chro
+
+| page                     | performance | accessibility | best practices | seo | screenshot                                                                                                                             | result |
+| ------------------------ | ----------- | ------------- | -------------- | --- | -------------------------------------------------------------------------------------------------------------------------------------- | ------ |
+| Homepage - index.html    | 90          | 97            | 96             | 92  | <details><summary>Homepage - index.html</summary><img src="./docs/readme_images/lighthouse/index-html.png"></details>                  | pass   |
+| register.html            | 96          | 95            | 96             | 92  | <details><summary>register.html</summary><img src="./docs/readme_images/lighthouse/register-html.png"></details>                       | pass   |
+| login.html               | 94          | 94            | 96             | 92  | <details><summary>login.html</summary><img src="./docs/readme_images/lighthouse/login-html.png"></details>                             | pass   |
+| blog_post_create.html    | 70          | 94            | 96             | 83  | <details><summary>blog_post_create.html</summary><img src="./docs/readme_images/lighthouse/blog-post-create-html.png"></details>       | pass   |
+| blog_post_update.html    | 71          | 94            | 96             | 83  | <details><summary>blog_post_update.html</summary><img src="./docs/readme_images/lighthouse/blog-post-update-html.png"></details>       | pass   |
+| blog_post_detail.html    | 88          | 100           | 96             | 83  | <details><summary>blog_post_detail.html</summary><img src="./docs/readme_images/lighthouse/blog-post-detail-html.png"></details>       | pass   |
+| blog_post_delete.html    | 97          | 100           | 96             | 83  | <details><summary>blog_post_delete.html</summary><img src="./docs/readme_images/v/blog-post-delete-html.png"></details>                | pass   |
+| user_profile_create.html | 68          | 94            | 96             | 83  | <details><summary>user_profile_create.html</summary><img src="./docs/readme_images/lighthouse/user-profile-create-html.png"></details> | pass   |
+| user_profile_update.html | 69          | 94            | 96             | 83  | <details><summary>user_profile_update.html</summary><img src="./docs/readme_images/lighthouse/user-profile-update-html.png"></details> | pass   |
+| user_profile_detail.html | 95          | 97            | 96             | 83  | <details><summary>user_profile_detail.html</summary><img src="./docs/readme_images/lighthouse/user-profile-detail-html.png"></details> | pass   |
+| user_profile_delete.html | 94          | 100           | 96             | 83  | <details><summary>user_profile_delete.html</summary><img src="./docs/readme_images/lighthouse/user-profile-delete-html.png"></details> | pass   |
+| comment_create.html      | 95          | 100           | 96             | 83  | <details><summary>comment_create.html</summary><img src="./docs/readme_images/lighthouse/comment-create-html.png"></details>           | pass   |
+| comment_update.html      | 96          | 100           | 96             | 83  | <details><summary>comment_update.html</summary><img src="./docs/readme_images/lighthouse/comment-update-html.png"></details>           | pass   |
+| comment_delete.html      | 88          | 100           | 96             | 83  | <details><summary>comment_delete.html</summary><img src="./docs/readme_images/lighthouse/comment-delete-html.png"></details>           | pass   |
+
+
+### Lighthouse test
