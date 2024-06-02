@@ -60,8 +60,8 @@
                     
                     {% if user.is_authenticated %}
                     {% if user.pk == post.author.pk %}
-                    <a href="{% url 'blog-post-update' post.pk %}" class="btn btn-sm btn-primary">Edit Post</a>
-                    <a href="{% url 'blog-post-delete' post.pk %}" class="btn btn-sm btn-danger">Delete Post</a>
+                    <a href="{% url 'blog-post-update' post.pk %}" class="btn btn-sm btn-primary mt-3 mr-3">Edit Post</a>
+                    <a href="{% url 'blog-post-delete' post.pk %}" class="btn btn-sm btn-danger mt-3 mr-3">Delete Post</a>
                     {% endif %}
                     {% endif %}
                 </div>

@@ -11,8 +11,8 @@
                 {% csrf_token %}
                 {{ form.as_div }}
                 {{ foobar|safe }}
-                <button type="submit" class="btn btn-primary">Create</button>
-                <a href="{% url 'home' %}" class="btn btn-primary">Home</a>
+                <button type="submit" class="btn btn-primary mt-3 mr-3">Create</button>
+                <a href="{% url 'home' %}" class="btn btn-primary mt-3 mr-3">Home</a>
             </form>
         </div>
     {% else %}
