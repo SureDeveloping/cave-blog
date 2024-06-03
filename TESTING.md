@@ -259,10 +259,10 @@ I also had errors in the Deployed version with the API (supply api key). So I ma
 I had already started but noticed that it has effects many other parts of my program. I didn't want to jeopardize the stability of the program, so close to the release. This should be fixed for the next realise. To do this, it makes sense to start setting up cloudanary from the beginning. For this reason, it is not yet possible to upload images to profiles and blog posts.
 - As described above, Summernode causes html errors and slows down the performance of the corresponding pages. An alternative text editor could offer a solution in the future. 
 - No warning messages are not displayed if:
-    - A user who is not logged in want to delete a user profile.
+- A user who is not logged in want to delete a user profile.
     - A user who is not logged in tries to access create a blog post.
     - A user who is not logged in tries to access create a comment.
     - A user who is not logged in tries to access edith a comment.
-    - A user who is not logged in tries to access delite a comment
+    - A user who is not logged in tries to access delite a comment <br>
 The user is redirected to the login page. The warning message is not shown. although this is included in the html. I have not yet been able to find the reason for this. Possibly the view has to be adapted and a message issued via the view. However, unauthorized access is not possible.
 
