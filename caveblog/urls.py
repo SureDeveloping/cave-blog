@@ -30,3 +30,6 @@ urlpatterns = [
     path('accounts/', include('accounts.urls')),
     path('summernote/', include('django_summernote.urls')),
 ]
+
+
+handler404 = 'blog.views.custom_404'

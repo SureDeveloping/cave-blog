@@ -195,8 +195,6 @@ Via chrome Dev tool the resposivness for different devices was tested. All teste
 
 
 ### User story testing
-
-
 |    | User Story                                                                                              | Acceptance Cretary                                                                                                                            | result |
 | -- | ------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
 | 1  | As a user, I want like to know what the website is about and made for.                                  | AC1: Page with good readable Text on top that explanes the Project                                                                            | pass   |
@@ -221,6 +219,8 @@ Via chrome Dev tool the resposivness for different devices was tested. All teste
 | 20 | As a user i want to read my Userprofile                                                                 | AC1: The user can read a Userprofile<br>AC2: The page has a basix styling                                                                     | pass   |
 | 21 | As a user i want to delite my Userprofile                                                               | AC1: The user can delite my Userprofile<br>AC2: The page has a basic styling                                                                  | pass   |
 | 22 | As a page operator I want to have a individual styled website.                                          | AC1: The websites has custom coloring                                                                                                         | pass   |
+| 23 | As a Admin i want to have a custom made 404 error Page                                                  | AC1:Page with good readable Text on all divies                                                                                                | pass   |
+
 
 ### Defensive programming test
 
