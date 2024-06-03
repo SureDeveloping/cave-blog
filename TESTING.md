@@ -14,9 +14,8 @@ Link back to [README.md](/README.md)
     - [Responsiveness test](#responsiveness-test)
     - [User story testing](#user-story-testing)
 - [Bugs](#bugs)
-    - [Solved bugs](#solved-bugs)
-    - [Known bugs](#known-bugs)
-    - [Unknown bugs](#unknown-bugs)
+    - [Fixed known bugs](#fixed-known-bugs)
+    - [Unfixed kown bugs](#Unfixed-kown-bugs)
 
 
 
@@ -221,3 +220,16 @@ Via chrome Dev tool the resposivness for different devices was tested. All teste
 | 20 | As a user i want to read my Userprofile                                                                 | AC1: The user can read a Userprofile<br>AC2: The page has a basix styling                                                                     | pass   |
 | 21 | As a user i want to delite my Userprofile                                                               | AC1: The user can delite my Userprofile<br>AC2: The page has a basic styling                                                                  | pass   |
 | 22 | As a page operator I want to have a individual styled website.                                          | AC1: The websites has custom coloring                                                                                                         | pass   |
+
+
+## Bugs
+This was my first Django/database project, I mainly encountered learning curves and initial challenges. However, the bugs that I struggled with longer or that required the help of tutor support were a different category.
+
+### Fixed known bugs
+- A message should be displayed in the login view as a warning if the form is not sent correctly and the login fails. Unfortunately, these messages did not appear in the template. The error lay in the fact that I used two identical url ending for the django.contrib.auth.urls and for the accounts.urls. After changing one of the endings, the messages were displayed.
+
+### Unfixed kown bugs
+- I had several errors and difficulties with the processing of images and Cloudinary. Large images loaded very slowly and slowed everything down. Here should be provided that the large is limited. <br>
+I also had errors in the Deployed version with the API. So I made a mistake when setting up Cloudinary. <br>
+I had already started but noticed that it has effects many other parts of my program. I didn't want to jeopardize the stability of the program so close to the release. This should be fixed for the next realise. To do this, it makes sense to start setting up cloudanary from the beginning
+

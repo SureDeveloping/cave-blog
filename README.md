@@ -406,6 +406,7 @@ The the default image for the userprofile and the icons are from the website [Fr
 * [youtube Ssali Jonathan](https://www.youtube.com/watch?v=qwATSBwJj9A/) - tutorial on Django's In Built Authentication.
 * [youtube Dee Mc](https://www.youtube.com/watch?v=sBjbty691eI&list=PLXuTq6OsqZjbCSfiLNb2f1FOs8viArjWy/) - tutorial on how to create a youtube blog.
 * [youtube Dr. Daniel Soper](https://www.youtube.com/watch?v=lAtCySGDD48) - tutorial on how to create an ERD with draw.io
+* [stackoverflow](https://stackoverflow.com/questions/39639264/django-highlight-current-page-in-navbar) - to make link in the navbar active 
 
 ### Acknowledgments
 I like to thank the follow persons for the help during the project:
