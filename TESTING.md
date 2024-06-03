@@ -2,6 +2,7 @@ Link back to [README.md](/README.md)
   
 # Testing
 
+## Content
 - [Code validation](#code-validation)
     - [HTML validation](#html-validation)
     - [CSS validation](#css-validation)
@@ -9,14 +10,13 @@ Link back to [README.md](/README.md)
     - [Lighthouse test](#lighthouse-test)
     - [Wave accessibility evaluation](#wave-accessibility-evaluation)
 - [Manual testing](#manual-testing)
-    - [User input Validation](#user-input-validation)
+    - [User input validation](#user-input-validation)
     - [Browser compatibility](#browser-compatibility)  
     - [Responsiveness test](#responsiveness-test)
     - [User story testing](#user-story-testing)
 - [Bugs](#bugs)
     - [Fixed known bugs](#fixed-known-bugs)
-    - [Unfixed kown bugs](#Unfixed-kown-bugs)
-
+    - [Unfixed known bugs](#unfixed-known-bugs)
 
 
 ## Code validation
@@ -44,14 +44,14 @@ The individual pages have been checked with the W3C validar. All errors could be
 | comment_update.html      | <details><summary>comment_update.html</summary><img src="./docs/readme_images/html-validator/comment-update-html.png"></details>                       | 0      | pass   |
 | comment_delete.html      | <details><summary>comment_delete.html</summary><img src="./docs/readme_images/html-validator/comment-delete-html.png"></details>                       | 0      | pass   |
 
-### CSS Validator:
+### CSS validation
 The base.cc file was tested using W3C Validator. No errors occurred.
 [W3C validator](https://validator.w3.org/) <br>
 Here is the test result: [](https://validator.w3.org/)
 [W3C validator - test result](docs/readme_images/css-validator/css-validation.png)
 
 
-### Python Validation
+### Python validation
 All python files created were tested with the CI Python Linter. The errors detected have been eliminated, so that all files are now error-free.
 [CI Python Linter](https://pep8ci.herokuapp.com/)
 
@@ -230,7 +230,7 @@ This was my first Django/database project, I mainly encountered learning curves 
 - I had not set WhitenoiseMiddleware to the second position in Middleware in the settings. Therefore this did not work properly. Despite this, I had already collected the tripod files beforehand. So django had created a staticfiles folder and heroko had worked with it. That's why I always had errors in the deployed version. With the help of the tutor support this could be uncovered. I deleted the old files and I collected those again.
 - The Summernode were not resposive. The solution was to add some configurations to the settings file to fix this problem.
 
-### Unfixed kown bugs
+### Unfixed known bugs
 - I had several errors and difficulties with the processing of images and Cloudinary. Large images loaded very slowly and slowed everything down. Here should be provided that the large is limited. <br>
 I also had errors in the Deployed version with the API (supply api key). So I made a mistake when setting up Cloudinary. <br>
 I had already started but noticed that it has effects many other parts of my program. I didn't want to jeopardize the stability of the program, so close to the release. This should be fixed for the next realise. To do this, it makes sense to start setting up cloudanary from the beginning. For this reason, it is not yet possible to upload images to profiles and blog posts.

@@ -4,7 +4,7 @@ Portfolio Project 4 – User SureDeveloping – Code Institute
 The website is a blog focused on caves. It's a place where cave enthusiasts can share their experiences by creating posts. Users can also comment on each other's posts. To get started, users need to set up a user accont. The blog is meant to be a space for like-minded individuals to connect, share experiences, and offer tips and advice for future cave visits.<br>
 [Link to the deployed Project](https://cave-blog-5fd1224bbbc5.herokuapp.com/)
 
-## Contents
+## Content
 - [User experience (UX)](#user-experience-ux)
     - [Project goals](#target-audience)
     - [Target audience](#target-audience)
