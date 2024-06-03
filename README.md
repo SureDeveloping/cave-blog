@@ -1,7 +1,7 @@
 # ReadME - Project Instruction
 Portfolio Project 4 – User SureDeveloping – Code Institute
 ## Introduction
-"The website is a blog focused on caves. It's a place where cave enthusiasts can share their experiences by creating posts. Users can also comment on each other's posts. To get started, users need to set up a user accont. The blog is meant to be a space for like-minded individuals to connect, share experiences, and offer tips and advice for future cave visits.<br>
+The website is a blog focused on caves. It's a place where cave enthusiasts can share their experiences by creating posts. Users can also comment on each other's posts. To get started, users need to set up a user accont. The blog is meant to be a space for like-minded individuals to connect, share experiences, and offer tips and advice for future cave visits.<br>
 [Link to the deployed Project](https://cave-blog-5fd1224bbbc5.herokuapp.com/)
 
 ## Contents
@@ -9,9 +9,9 @@ Portfolio Project 4 – User SureDeveloping – Code Institute
     - [Project goals](#target-audience)
     - [Target audience](#target-audience)
     - [User requirements and expectations](#user-requirements-and-expectations)
-- [Epics and user stories](#user-story)
-    - [Initial epics)](#initial-epics-for-an-mvp)
-    - [Initial userstories )](#initial-userstories-for-an-mvp)
+- [Epics and user stories](#epics-and-user-stories)
+    - [Initial epics](#initial-epics)
+    - [Initial userstories](#initial-userstories)
 - [Agile approach](#agile-approach)
 - [Entity relationship diagram](#entity-relationship-diagram) 
 - [Design](#design) 
@@ -21,20 +21,20 @@ Portfolio Project 4 – User SureDeveloping – Code Institute
 - [Wireframe](#wireframe) 
 - [Features](#features) 
     - [Implemented features](#implemented-features) 
-    - [Future features](#futur-features) 
+    - [Future features](#future-features) 
 - [Technologies used](#technologies-used) 
-    - [Languages and framework](#languages-and-framework) 
-    - [Database](#database) 
-    - [Technologies and tools](#technologies-and-tools) 
+    - [Languages and frameworks](#languages-and-frameworks) 
+    - [Software and tools](#software-and-tools) 
 - [Deployment](#deployment) 
-    - [Pre deployment](#pre-deployment) 
-    - [Deploying with heroku](#deploying-with-heroku) 
-    - [Fork the repository](#fork-the-repository) 
-    - [Clone the repository](#clone-the-repository) 
+    - [Preparation for heroku depolyment](#preparation-for-heroku-depolyment) 
+    - [Deploying on heroku](#deploying-on-heroku) 
+    - [Fork this repository](#fork-this-repository) 
+    - [Clone this repository](#clone-this-repository) 
 - [Testing](#testing) 
 - [Credits](#credits) 
-    - [Content on the website](#content-on-the-website) 
-    - [Code materials used](#code-materials-used) 
+    - [Content](#content) 
+    - [Media](#media) 
+    - [Code](#code) 
 - [Acknowledgments](#acknowledgments)
 
 ## User experience (UX)
@@ -80,7 +80,7 @@ As operator of the website I want to:
 * An account app with all user profiles with CRUD functionality
 * A Comment function for the blog posts with CRUD functionality
 
-### Initial user stories
+### Initial userstories
 * As a user, I want like to know what the website is about and made for
 * As a user i want to see all Blog postes
 * As a admin i want to have the overall control of the website
@@ -152,7 +152,7 @@ The uploading of images will only be published in the next realize.
 ![Entity Relationship Diagram](docs/readme_images/erd.png "Entity Relationship Diagram")
 
 ## Design
-### Color scheme
+### Color
 I used the website [Coolors](https://coolors.com/) to find colors that go together. 
 
 ![Coolor palette](docs/readme_images/coolors.png "Color palette")
@@ -305,7 +305,7 @@ There are some features that are still possible and can be implemented in the fu
 * Categories function to sort blog posts into groups.
 
 ## Technologies used
-### Languages and frameworks used
+### Languages and frameworks
 HTML, CSS and Python languages were used in combination with the frameworks bootstrap and django.
 Django was also customised with:
 * Gunicorn - as WSGI (Web Server Gateway Interface) for running Python web applications.
@@ -313,7 +313,7 @@ Django was also customised with:
 * Whitenoise - for storing static files.
 * Cloudinary - as cloud to store no styic fieles (in the next release)
 
-### Software used
+### Software and tools
 Balsamiq - To create a wireframe. <br>
 Draw-io - To create an ERD. <br>
 Gitpod - To code the website. <br>
@@ -337,7 +337,7 @@ Wave Accessibility Tool - to test the accessibility. <br>
 ## Deployment
 The project was coded with gipod and then deployed on heroku.
 
-### Preparation of the deployment on Herokuko
+### Preparation for heroku depolyment
 * The requirements.txt must be up to date - command pip3 freeze > requirements.txt.
 * A procfile needs to be created for the configuration of the Heroku deployment as a Gunicorn web application.
 * ALLOWED_HOSTS in settings.py must be set to ['app_name.heroku.com', 'localhost'] and static files must be configured.
