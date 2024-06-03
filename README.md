@@ -289,6 +289,9 @@ Delete comments page:
 The delete comment page also consists of a warning question below which there are two buttons. One button to delete the comment, the other to go back to the homepage.
 ![Delete comments page](docs/readme_images/features-homepage-comment-delete.png "Delete comments page")
 
+#### Custom 404 page:
+![Custom 404 page](docs/readme_images/404.png "Custom 404 page")
+
 ### Future Features
 There are some features that are still possible and can be implemented in the future. These are already listed in the Aglie list and rated as “Will not have”.
 * Password Change function.
