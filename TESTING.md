@@ -227,9 +227,11 @@ This was my first Django/database project, I mainly encountered learning curves 
 
 ### Fixed known bugs
 - A message should be displayed in the login view as a warning if the form is not sent correctly and the login fails. Unfortunately, these messages did not appear in the template. The error lay in the fact that I used two identical url ending for the django.contrib.auth.urls and for the accounts.urls. After changing one of the endings, the messages were displayed.
+- I had not set WhitenoiseMiddleware to the second position in Middleware in the settings. Therefore this did not work properly. Despite this, I had already collected the tripod files beforehand. So django had created a staticfiles folder and heroko had worked with it. That's why I always had errors in the deployed version. With the help of the tutor support this could be uncovered. I deleted the old files and I collected those again.
 
 ### Unfixed kown bugs
 - I had several errors and difficulties with the processing of images and Cloudinary. Large images loaded very slowly and slowed everything down. Here should be provided that the large is limited. <br>
 I also had errors in the Deployed version with the API. So I made a mistake when setting up Cloudinary. <br>
-I had already started but noticed that it has effects many other parts of my program. I didn't want to jeopardize the stability of the program so close to the release. This should be fixed for the next realise. To do this, it makes sense to start setting up cloudanary from the beginning
+I had already started but noticed that it has effects many other parts of my program. I didn't want to jeopardize the stability of the program so close to the release. This should be fixed for the next realise. To do this, it makes sense to start setting up cloudanary from the beginning. For this reason, it is not yet possible to upload images to profiles and blog posts.
+- As described above, Summernode causes html errors and slows down the performance of the corresponding pages. An alternative text editor could offer a solution in the future. 
 
