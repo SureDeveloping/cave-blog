@@ -2,25 +2,28 @@
 {% block title %} Delete your Profile {% endblock %}
 {% block content %}
 
-{% if user.is_authenticated and user.id == profile.user_id %}
-    
-        <h1> Delete your Profile?</h1> 
-        <br>
-        <div class="alert alert-danger" role="alert"> {{ user.username }} are you sure you want delete your Profile?</div>
+{% if user.is_authenticated %}
+    {% if profile %}
+        {% if user.id == profile.user_id %}
+            <h1> Delete your Profile?</h1> 
+            <br>
+            <div class="alert alert-danger" role="alert"> {{ user.username }} are you sure you want delete your Profile?</div>
 
-        <div class="form-group"> 
-            <form method="POST">
-                {% csrf_token %}
-                <button type="submit" class="btn btn-danger mt-3 mr-3">Delete Profile</button>
-                <a href="{% url 'home' %}" class="btn btn-primary mt-3 mr-3">Home</a>
-            </form>
-        </div>
-
+            <div class="form-group"> 
+                <form method="POST">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-danger mt-3 mr-3">Delete Profile</button>
+                    <a href="{% url 'home' %}" class="btn btn-primary mt-3 mr-3">Home</a>
+                </form>
+            </div>
+        {% else %}
+            <div class="alert alert-danger" role="alert">You can only delete your own Profile!</div>
+        {% endif %}
+    {% else %}
+        <div class="alert alert-warning" role="alert">You don't have a profile to delete!</div>
+    {% endif %}
 {% else %}
-    <div class="alert alert-danger" role="alert">Please login if you want to delete your Profile! <br>
-        You can only delite your own Profile!
-    </div>
+    <div class="alert alert-danger" role="alert">Please login if you want to delete your Profile!</div>
 {% endif %}
-
 
 {% endblock %}

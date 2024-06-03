@@ -79,13 +79,20 @@ class UserProfileDeleteView(LoginRequiredMixin, DeleteView):
     success_url = reverse_lazy('home')
 
     def get_object(self, queryset=None):
-        return self.request.user.profile
+        try:
+            return self.request.user.profile
+        except Profile.DoesNotExist:
+            messages.error(self.request, 'User has no profile.')
+            return redirect('home')
 
     def delete(self, request, *args, **kwargs):
         self.object = self.get_object()
-        success_url = self.get_success_url()
-        self.object.delete()
-        return HttpResponseRedirect(success_url)
+        if self.object:
+            success_url = self.get_success_url()
+            self.object.delete()
+            return HttpResponseRedirect(success_url)
+        else:
+            return redirect('home')
 
 class CustomLoginView(auth_views.LoginView):
     def form_invalid(self, form):
