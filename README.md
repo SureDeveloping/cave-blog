@@ -42,7 +42,7 @@ The website is a blog focused on caves. It's a place where cave enthusiasts can 
 The main goal of the project is it to offer an exchange opportunity for people who like caves and visit them. An easy and fun to use blog page with intuitive responsive Design. 
 
 ### Target audience
-The main target group in are:
+The main target groups are:
 * People who like to visit caves and share their experiences.
 * People who want to find out about caves they might want to visit.
 
@@ -57,8 +57,8 @@ As a first time user of the website, you want to:
 
 As a frequent user of the website, I want to:
 * login and logout.
-* Update existing blog posts and comments.
-* Read new blog posts and comments.
+* update existing blog posts and comments.
+* read new blog posts and comments.
 * create a new blog posts.
 * comment on a blog posts.
 
@@ -67,7 +67,7 @@ As operator of the website I want to:
 * provide a feedback of all user inputs.
 * provide an error free website.
 * provide an a useful and fun app to many users.
-* Provide the possibility to create, read, update and delete blogposts, comments and userprofiles.
+* provide the possibility to create, read, update and delete blogposts, comments and userprofiles.
 
 ## Epics and user stories
 ### Initial epics
@@ -78,30 +78,30 @@ As operator of the website I want to:
 * Login page with form
 * Navigation bar that shows the logged in user
 * An account app with all user profiles with CRUD functionality
-* A Comment function for the blog posts with CRUD functionality
+* A comment function for the blog posts with CRUD functionality
 
 ### Initial userstories
-* As a user, I want like to know what the website is about and made for
-* As a user i want to see all Blog postes
-* As a admin i want to have the overall control of the website
-* As a user, I want to create my own account
-* As a user, I want to login my own account
-* As a user, I want to navigate through the subpages of the website when iam login
-* As a user i want to write my post with a rich text editor for eaysy handling and styling
-* As a user i want to create a blog post
-* As a user i want to update a blog post
-* As a user i want to read a blog posts
-* As a user i want to delite a blog post
-* As a user, I would like to protect my blog entries from unauthorized editing or deletion
-* As a user I would like to be automatically noted as author when I create a new post editing or deletion
-* As a user i want to create a comment
-* As a user i want to update a comment
-* As a user i want to read a comment
-* As a user i want to delite a comment
-* As a user i want to create a Userprofile
-* As a user i want to update a  Userprofile
-* As a user i want to read my Userprofile
-* As a user i want to delite my Userprofile
+* As a user, I want like to know what the website is about and made for.
+* As a user i want to see all Blog postes.
+* As a admin i want to have the overall control of the website.
+* As a user, I want to create my own account.
+* As a user, I want to login my own account.
+* As a user, I want to navigate through the subpages of the website when iam logged in.
+* As a user i want to write my post with a rich text editor for easy handling and styling.
+* As a user i want to create a blog post.
+* As a user i want to update a blog post.
+* As a user i want to read a blog posts.
+* As a user i want to delite a blog post.
+* As a user, I would like to protect my blog entries from unauthorized editing or deletion.
+* As a user I would like to be automatically noted as author when I create a new post editing or deletion.
+* As a user i want to create a comment.
+* As a user i want to update a comment.
+* As a user i want to read a comment.
+* As a user i want to delite a comment.
+* As a user i want to create a userprofile.
+* As a user i want to update a  userprofile.
+* As a user i want to read my userprofile.
+* As a user i want to delite my Userprofile.
 
 ## Agile approach
 This application was developed by using an Agile apporoch. At the beginning, a list was created in which epics userstory and task were collected. These were evaluated using the Moscow Method, into three levels of importance: 'Must Have', 'Should Have', 'Cloud have#, and 'Will not have (wish to have)'.
@@ -162,11 +162,11 @@ Finally, I checked the contrast again with [Contrast-grid](contrast-grid.eightsh
 ![Contrast grid color palette](docs/readme_images/contrast-grid.png "Contrast grid color palette")
 
 ### Typography
-Tho font in the project is PT Sans, a sans-serif googlefonds.
+The font in the project is PT Sans, a sans-serif googlefonds.
 
 ### Imagery
 There is only one images in this project. The default userprofile picture is a picture from [Freepik](https://freepik.com/).
-The uplosding funtion is deactivated. The uploading function with cloudinary was not working shorly before the deployment. This function will be added in a later realize.
+The uploading funtion is deactivated. The uploading function with cloudinary was not working shorly before the deployment. This function will be added in a later realize.
 
 ## Wireframe
 To get an idea of the look of the individual web pages, wireframes were created in advance for each page.
@@ -228,10 +228,10 @@ At the top of the main section there is a welcome text followed by a button that
 After the welcome section, all blog posts are listed. On a large screen always 3 next to each other. On mobile devices, all posts are displayed one below the other. The title of each block post is a link that leads to the detailed view of the respective post. The block post text is followed by the author of the post. This is also clickable and leads to the user profile of the author. 
 <br>
 Homepage on big screens: <br>
-![Homepage an big screens](docs/readme_images/features-homepage-big-screen.png "Homepage an big screens")
+![Homepage on big screens](docs/readme_images/features-homepage-big-screen.png "Homepage on big screens")
 
 Homepage on small screens: <br>
-![Homepage on smalle screens](docs/readme_images/features-homepage-smale-screen.png "Homepage on smalle screens")
+![Homepage on small screens](docs/readme_images/features-homepage-smale-screen.png "Homepage on small screens")
 <br>
 When a user is logged in, the navigation bar changes. Between the website name “Cave Blog” and the homepage link the username of the logged in user is displayed “Username is logged in”. The links to the register page and to the login have disappeared. Instead of these links, the link to the Create Blog Post page, Create User Profile Profile page and the link to the Logout page are located to the right of the Home link. <br>
 The welcome text is also removed and the blog post overview follows directly. A button has appeared under the heading which leads to the Create Post page. If the author has already created a post, two buttons appear under the respective post. One leads to the Update page of the post, the other to the Delete page for the post. 
