@@ -2,22 +2,29 @@
 {% block title %} Update your Userprofile {% endblock %}
 {% block content %}
 
-{% if user.is_authenticated and user.id == profile.user_id %}
-
-    <h1>Update your Userprofile</h1>
-    <div class="form-group"> 
-        <form method="POST" enctype="multipart/form-data">
-            {% csrf_token %}
-            {{ form.as_div }}
-            {{ foobar|safe }}
-            <button type="submit" class="btn btn-primary mt-3 mr-3">Update</button>
-            <a href="{% url 'home' %}" class="btn btn-primary mt-3 mr-3">Home</a >
-        </form>
-    </div>
+{% if user.is_authenticated %}
+    {% if profile %}
+        {% if user.id == profile.user_id %}
+            <h1>Update your Userprofile</h1>
+            <div class="form-group"> 
+                <form method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {{ form.as_div }}
+                    {{ foobar|safe }}
+                    <button type="submit" class="btn btn-primary mt-3 mr-3">Update</button>
+                    <a href="{% url 'home' %}" class="btn btn-primary mt-3 mr-3">Home</a >
+                </form>
+            </div>
+        {% else %}
+            <div class="alert alert-danger" role="alert">Please login to your account if you want to update your Userprofile! <br>
+                You can only update your own Profile!
+            </div>
+        {% endif %}
+    {% else %}
+        <div class="alert alert-danger" role="alert">You don't have a profile to update!</div>
+    {% endif %}
 {% else %}
-    <div class="alert alert-danger" role="alert">Please login to your account if you want to update your Userprofile! <br>
-        You can only update your own Profile!
-    </div>
+    <div class="alert alert-danger" role="alert">Please login if you want to update your Userprofile!</div>
 {% endif %}
 
 {% endblock %}
